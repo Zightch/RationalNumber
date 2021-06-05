@@ -13,6 +13,8 @@ RationalNumber(有理数)类库满足你的所有数据需求
 QQ号:2166825850  
 编程交流群:928034473  
 # 使用文档  
+[配置环境](https://github.com/Zightch/rational-number#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83)  
+[]()  
 ## 配置环境  
 ### 第一步  
 打开VS2019,并新建空项目,名为Rational_test(名字自己写)  
@@ -39,3 +41,5 @@ QQ号:2166825850
 1.右键源文件->新建项->Cpp文件  
 2.写入代码  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/%E7%AC%AC%E5%9B%9B%E6%AD%A5.PNG)  
+## 开发文档  
+
