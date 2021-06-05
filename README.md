@@ -49,30 +49,45 @@ QQ号:2166825850
 5.再次重新编译运行就不会有问题了  
 ## 开发文档  
 1.[函数](https://github.com/Zightch/rational-number#%E5%87%BD%E6%95%B0)  
-2.[定义](https://github.com/Zightch/rational-number#%E6%A6%82%E5%BF%B5)  
+2.[定义](https://github.com/Zightch/rational-number#%E5%AE%9A%E4%B9%89)  
 ### 函数  
 #### RationalNumber 构造函数  
 一共 12 个重载  
 满足所有的 基本数据类型 和 复合数据类型  
-![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/RationalNumber%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0.PNG)  
-![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/RationalNumber%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B02.PNG)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/RationalNumber%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0.PNG)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/RationalNumber%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B02.PNG)  
 #### c_str()  
 直接输出 RationalNumber 类型的变量是不可以的  
-![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/c_str().PNG)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/c_str().PNG)  
 需要转换成 const char* 才能正常输出数据
 用法和 std::string::c_str() 类似  
-![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/c_str()2.PNG)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/c_str()2.PNG)  
 #### flush()  
 用于刷新数字(由于开发中很少遇到这种情况,这里就不图片演示了)  
-1.清除 整数 前多余的 0 和 小数 后多余的 0
-2.如果这个数字是 0 [(关于 0 的定义)](),并且符号为 "-" ,将符号变为 "+"  
-"-0091.3200" -> flush() -> ""-91.32"  
+1.清除 整数 前多余的 0 和 小数 后多余的 0  
+2.如果这个数字是 0 [(关于 0 的定义)](https://github.com/Zightch/rational-number#0-%E7%9A%84%E5%AE%9A%E4%B9%89),并且符号为 "-" ,将符号变为 "+"  
+"-0091.3200" -> flush() -> "-91.32"  
 "-0" -> flush() -> "0"  
+#### setAccuracy(unsigned long = R_AC)  
+#### setSymbol(bool)  
+#### setElement(size_t, char)   
+#### setElement(RationalNumber, char)  
+#### getAccuracy()  
+#### getIntegerSize()  
+#### getDecimalSize()  
+#### getInteger()  
+#### getDecimal()  
+#### getPureNumber()  
+#### getPureNumberSize()  
+#### getSymbol();                      
+#### getElement(size_t)  
+#### getElement(RationalNumber)  
 ### 定义  
 #### 整数部分
 #### 小数部分
 #### 符号
 #### 小数精度  
+一个宏定义 
 #### 0 的定义
 整数部分和小数部分共同为 0 时,这个数字为 0  
 
