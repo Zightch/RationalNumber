@@ -69,6 +69,9 @@ QQ号:2166825850
 "-0091.3200" -> flush() -> "-91.32"  
 "-0" -> flush() -> "0"  
 #### setAccuracy(unsigned long = R_AC)  
+设置改变量的小数精度  
+默认为7  
+[关于 小数精度 的定义](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
 #### setSymbol(bool)  
 #### setElement(size_t, char)   
 #### setElement(RationalNumber, char)  
@@ -87,7 +90,7 @@ QQ号:2166825850
 #### 小数部分  
 #### 符号  
 #### 小数精度  
-一个宏定义  
+一个宏定义 #define R_AC 7  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%AE%9A%E4%B9%89/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6.PNG)  
 它决定了 c_str() 的输出小数最大位数 和 被小数赋值时的最大位数  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%AE%9A%E4%B9%89/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A62.PNG)  
