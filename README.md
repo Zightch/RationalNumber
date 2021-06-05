@@ -14,7 +14,7 @@ QQ号:2166825850
 编程交流群:928034473  
 # 使用文档  
 #### 1.[配置环境](https://github.com/Zightch/rational-number#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83)  
-#### 2.[开发文档](https://github.com/Zightch/rational-number/blob/main/README.md#%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3)  
+#### 2.[开发文档](https://github.com/Zightch/rational-number#%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3)  
 ## 配置环境  
 ### 第一步  
 打开VS2019,并新建空项目,名为Rational_test(名字自己写)  
@@ -48,8 +48,8 @@ QQ号:2166825850
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/%E7%AC%AC%E5%9B%9B%E6%AD%A53.PNG)  
 5.再次重新编译运行就不会有问题了  
 ## 开发文档  
-1.[函数]()  
-2.[概念]()  
+1.[函数](https://github.com/Zightch/rational-number#%E5%87%BD%E6%95%B0)  
+2.[定义](https://github.com/Zightch/rational-number#%E6%A6%82%E5%BF%B5)  
 ### 函数  
 #### RationalNumber 构造函数  
 一共 12 个重载  
@@ -62,7 +62,17 @@ QQ号:2166825850
 需要转换成 const char* 才能正常输出数据
 用法和 std::string::c_str() 类似  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/c_str()2.PNG)  
-#### 
-
-### 概念  
+#### flush()  
+用于刷新数字(由于开发中很少遇到这种情况,这里就不图片演示了)  
+1.清除 整数 前多余的 0 和 小数 后多余的 0
+2.如果这个数字是 0 [(关于 0 的定义)](),并且符号为 "-" ,将符号变为 "+"  
+"-0091.3200" -> flush() -> ""-91.32"  
+"-0" -> flush() -> "0"  
+### 定义  
+#### 整数部分
+#### 小数部分
+#### 符号
 #### 小数精度  
+#### 0 的定义
+整数部分和小数部分共同为 0 时,这个数字为 0  
+
