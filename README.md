@@ -14,7 +14,7 @@ QQ号:2166825850
 编程交流群:928034473  
 # 使用文档  
 [配置环境](https://github.com/Zightch/rational-number#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83)  
-[]()  
+[开发文档](https://github.com/Zightch/rational-number/blob/main/README.md#%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3)  
 ## 配置环境  
 ### 第一步  
 打开VS2019,并新建空项目,名为Rational_test(名字自己写)  
