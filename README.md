@@ -83,11 +83,15 @@ QQ号:2166825850
 #### getElement(size_t)  
 #### getElement(RationalNumber)  
 ### 定义  
-#### 整数部分
-#### 小数部分
-#### 符号
+#### 整数部分  
+#### 小数部分  
+#### 符号  
 #### 小数精度  
-一个宏定义 
-#### 0 的定义
+一个宏定义  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%AE%9A%E4%B9%89/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6.PNG)  
+它决定了 c_str() 的输出小数最大位数 和 被小数赋值时的最大位数  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%AE%9A%E4%B9%89/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A62.PNG)  
+我们可以发现 a 和 b 的小数位数都是 7 ,不管他们的小数部分的纯数字[(关于纯数字的定义)]()有多少位  
+#### 0 的定义  
 整数部分和小数部分共同为 0 时,这个数字为 0  
-
+#### 纯数字  
