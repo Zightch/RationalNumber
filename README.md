@@ -79,6 +79,10 @@ QQ号:2166825850
 设置数字的[符号](https://github.com/Zightch/rational-number#%E7%AC%A6%E5%8F%B7)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setSymbol(bool).PNG)  
 #### setElement(size_t, char)   
+设置[元素](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0)  
+参数size_t是[元素位置](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0)  
+
+
 #### setElement(RationalNumber, char)  
 #### getAccuracy()  
 #### getIntegerSize()  
@@ -109,3 +113,14 @@ QQ号:2166825850
 整数部分和小数部分共同为 0 时,这个数字为 0  
 #### 纯数字  
 #### 元素  
+简单来说就是每一位的数字,包括整数和小数  
+例如数字 3.1415926  
+3,1,4,1,5,9,2,6都是这个数字的元素  
+而符号和小数点不是该数字元素  
+##### 元素位置  
+例如数字 -90.342  
+9位于第0个元素,0位于第1个元素,3位于第2个元素......以此类推  
+即  
+元素 | 9 | 0 | 3 | 4 | 2 |
+:-: | :-: | :-: | :-: | :-: | :-: |
+元素位置(下标) | 0 | 1 | 2 | 3 | 4 |  
