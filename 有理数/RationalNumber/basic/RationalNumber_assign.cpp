@@ -31,18 +31,30 @@ RationalNumber RationalNumber::operator=(int num) {
 	Int tmp = I2S<int>(num);
 	integer = tmp.integer;
 	symbol = tmp.symbol;
+	if (ccstr != 0) {
+		delete[]ccstr;
+		ccstr = 0;
+	}
 	return *this;
 }
 RationalNumber RationalNumber::operator=(long num) {
 	Int tmp = I2S<long>(num);
 	integer = tmp.integer;
 	symbol = tmp.symbol;
+	if (ccstr != 0) {
+		delete[]ccstr;
+		ccstr = 0;
+	}
 	return *this;
 }
 RationalNumber RationalNumber::operator=(long long num) {
 	Int tmp = I2S<long long>(num);
 	integer = tmp.integer;
 	symbol = tmp.symbol;
+	if (ccstr != 0) {
+		delete[]ccstr;
+		ccstr = 0;
+	}
 	return *this;
 }
 
@@ -67,20 +79,32 @@ std::string UI2S(UI num) {
 }
 RationalNumber RationalNumber::operator=(unsigned int num) {
 	integer = UI2S<unsigned int>(num);
+	if (ccstr != 0) {
+		delete[]ccstr;
+		ccstr = 0;
+	}
 	return *this;
 }
 RationalNumber RationalNumber::operator=(unsigned long num) {
 	integer = UI2S<unsigned long>(num);
+	if (ccstr != 0) {
+		delete[]ccstr;
+		ccstr = 0;
+	}
 	return *this;
 }
 RationalNumber RationalNumber::operator=(unsigned long long num) {
 	integer = UI2S<unsigned long long>(num);
+	if (ccstr != 0) {
+		delete[]ccstr;
+		ccstr = 0;
+	}
 	return *this;
 }
 
 struct Rm {
-	std::string integer = "";//整数部分
-	std::string decimal = "";//小数部分
+	std::string integer = "";//鏁存暟閮ㄥ垎
+	std::string decimal = "";//灏忔暟閮ㄥ垎
 	bool symbol = 1;
 };
 template<class D>
@@ -114,6 +138,10 @@ RationalNumber RationalNumber::operator=(float num) {
 	integer = rm.integer;
 	decimal = rm.decimal;
 	symbol = rm.symbol;
+	if (ccstr != 0) {
+		delete[]ccstr;
+		ccstr = 0;
+	}
 	return *this;
 }
 RationalNumber RationalNumber::operator=(double num) {
@@ -121,6 +149,10 @@ RationalNumber RationalNumber::operator=(double num) {
 	integer = rm.integer;
 	decimal = rm.decimal;
 	symbol = rm.symbol;
+	if (ccstr != 0) {
+		delete[]ccstr;
+		ccstr = 0;
+	}
 	return *this;
 }
 RationalNumber RationalNumber::operator=(long double num) {
@@ -128,6 +160,10 @@ RationalNumber RationalNumber::operator=(long double num) {
 	integer = rm.integer;
 	decimal = rm.decimal;
 	symbol = rm.symbol;
+	if (ccstr != 0) {
+		delete[]ccstr;
+		ccstr = 0;
+	}
 	return *this;
 }
 
@@ -155,5 +191,9 @@ RationalNumber RationalNumber::operator=(const char* num_tmp) {
 	decimal = rm.decimal;
 	symbol = rm.symbol;
 	flush();
+	if (ccstr != 0) {
+		delete[]ccstr;
+		ccstr = 0;
+	}
 	return *this;
 }
