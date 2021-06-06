@@ -55,6 +55,7 @@ QQ号:2166825850
 5.再次重新编译运行就不会有问题了  
 
 </details>  
+
 ## 开发文档  
 1.[函数](https://github.com/Zightch/rational-number#%E5%87%BD%E6%95%B0)  
 2.[定义](https://github.com/Zightch/rational-number#%E5%AE%9A%E4%B9%89)  
