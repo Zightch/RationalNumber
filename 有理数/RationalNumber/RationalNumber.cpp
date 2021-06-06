@@ -43,6 +43,8 @@ RationalNumber::RationalNumber(const char* num_tmp) {
 }
 
 RationalNumber::~RationalNumber() {
-	if (ccstr != 0)
+	if (ccstr != 0) {
 		delete[]ccstr;
+		ccstr = 0;
+	}
 }
