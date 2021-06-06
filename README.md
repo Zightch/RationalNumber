@@ -2,6 +2,8 @@
 long long数据范围不够大?  
 long double精度不够高?  
 RationalNumber(有理数)类库满足你的所有数据需求  
+# 下载
+https://github.com/Zightch/rational-number/releases  
 # 说明  
 本类库由 **林梦-Zightch** 开发,为开源项目  
 类库自带的所有运算均为 **高精度** 计算  
@@ -69,10 +71,13 @@ QQ号:2166825850
 "-0091.3200" -> flush() -> "-91.32"  
 "-0" -> flush() -> "0"  
 #### setAccuracy(unsigned long = R_AC)  
-设置改变量的小数精度  
+设置改变量的[小数精度](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
 默认为7  
-[关于 小数精度 的定义](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
+可以通过更改它来实现改变输出的[小数精度](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setAccuracy(unsigned%20long%20%3D%20R_AC).PNG)  
 #### setSymbol(bool)  
+设置数字的[符号](https://github.com/Zightch/rational-number#%E7%AC%A6%E5%8F%B7)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setSymbol(bool).PNG)  
 #### setElement(size_t, char)   
 #### setElement(RationalNumber, char)  
 #### getAccuracy()  
@@ -89,12 +94,18 @@ QQ号:2166825850
 #### 整数部分  
 #### 小数部分  
 #### 符号  
+它决定了一个数字的正负号  
+为1时数字是正数  
+为0时数字是负数  
+关于更改符号可以使用 [setSymbol(bool)](https://github.com/Zightch/rational-number#setsymbolbool) 函数  
 #### 小数精度  
 一个宏定义 #define R_AC 7  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%AE%9A%E4%B9%89/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6.PNG)  
 它决定了 c_str() 的输出小数最大位数 和 被小数赋值时的最大位数  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%AE%9A%E4%B9%89/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A62.PNG)  
 我们可以发现 a 和 b 的小数位数都是 7 ,不管他们的小数部分的[纯数字](https://github.com/Zightch/rational-number#%E7%BA%AF%E6%95%B0%E5%AD%97)有多少位  
+如果要更改某个变量的 小数精度 可以使用 [setAccuracy(unsigned long = R_AC)](https://github.com/Zightch/rational-number#setaccuracyunsigned-long--r_ac) 函数  
 #### 0 的定义  
 整数部分和小数部分共同为 0 时,这个数字为 0  
 #### 纯数字  
+#### 元素  
