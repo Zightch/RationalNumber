@@ -17,7 +17,11 @@ QQ号:2166825850
 # 使用文档  
 #### 1.[配置环境](https://github.com/Zightch/rational-number#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83)  
 #### 2.[开发文档](https://github.com/Zightch/rational-number#%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3)  
+
 ## 配置环境  
+<details>  
+  <summary>展开</summary>  
+
 ### 第一步  
 打开VS2019,并新建空项目,名为Rational_test(名字自己写)  
 ### 第二步  
@@ -49,6 +53,8 @@ QQ号:2166825850
 4.将 RationalNumber.dll 复制到 RationalNumber_test.exe 所在目录下  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/%E7%AC%AC%E5%9B%9B%E6%AD%A53.PNG)  
 5.再次重新编译运行就不会有问题了  
+
+</details>  
 ## 开发文档  
 1.[函数](https://github.com/Zightch/rational-number#%E5%87%BD%E6%95%B0)  
 2.[定义](https://github.com/Zightch/rational-number#%E5%AE%9A%E4%B9%89)  
@@ -78,12 +84,26 @@ QQ号:2166825850
 #### setSymbol(bool)  
 设置数字的[符号](https://github.com/Zightch/rational-number#%E7%AC%A6%E5%8F%B7)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setSymbol(bool).PNG)  
-#### setElement(size_t, char)   
+#### setElement(size_t, char)  
 设置[元素](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0)  
-参数size_t是[元素位置](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0)  
-
-
+将 size_t 下标下的元素换成 char  
+参数 size_t 是[元素位置](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
+如果你传入的参数大小超过最大下标,则会抛出const char* 类型的异常(数组越界)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setElement(size_t%2C%20char).PNG)  
+参数 char 是新的元素  
+就是你要替换的后的新元素  
+这个参数允许使用两种数据  
+一种是 数字 0 ~ 9  
+另一种是 字符 '0' ~ '9'  
+只要不在这个范围内  
+就会抛出const char* 类型的异常(数据不符合规范)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setElement(size_t%2C%20char)2.PNG)  
 #### setElement(RationalNumber, char)  
+这是 [setElement(size_t, char)](https://github.com/Zightch/rational-number#setelementsize_t-char) 的重载  
+可以发现,size_t 被换成了 RationalNumber  
+那么也就是说它可以访问到更大的下标  
+但是,起作用的只有整数部分  
+因为下标只能是整数  
 #### getAccuracy()  
 #### getIntegerSize()  
 #### getDecimalSize()  
@@ -121,6 +141,6 @@ QQ号:2166825850
 例如数字 -90.342  
 9位于第0个元素,0位于第1个元素,3位于第2个元素......以此类推  
 即  
-元素 | 9 | 0 | 3 | 4 | 2 |
-:-: | :-: | :-: | :-: | :-: | :-: |
-元素位置(下标) | 0 | 1 | 2 | 3 | 4 |  
+元素 | 9 | 0 | 3 | 4 | 2
+:-: | :-: | :-: | :-: | :-: | :-:
+元素位置(下标) | 0 | 1 | 2 | 3 | 4  
