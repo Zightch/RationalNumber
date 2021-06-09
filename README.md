@@ -60,10 +60,6 @@ QQ号:2166825850
 1.[函数](https://github.com/Zightch/rational-number#%E5%87%BD%E6%95%B0)  
 2.[定义](https://github.com/Zightch/rational-number#%E5%AE%9A%E4%B9%89)  
 ### 函数  
-
-<details>  
-  <summary>展开</summary>  
-
 #### RationalNumber 构造函数  
 一共 12 个重载  
 满足所有的 基本数据类型 和 复合数据类型  
@@ -110,6 +106,8 @@ QQ号:2166825850
 但是,起作用的只有整数部分  
 因为下标只能是整数  
 #### getAccuracy()  
+可以获取该变量的[小数精度](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getAccuracy().PNG)  
 #### getIntegerSize()  
 #### getDecimalSize()  
 #### getInteger()  
@@ -119,14 +117,7 @@ QQ号:2166825850
 #### getSymbol();                      
 #### getElement(size_t)  
 #### getElement(RationalNumber)  
-
-</details>  
-
 ### 定义  
-
-<details>  
-  <summary>展开</summary>  
-
 #### 整数部分  
 #### 小数部分  
 #### 符号  
@@ -157,4 +148,3 @@ QQ号:2166825850
 :-: | :-: | :-: | :-: | :-: | :-:
 元素位置(下标) | 0 | 1 | 2 | 3 | 4  
 
-</details>    
