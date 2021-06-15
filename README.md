@@ -176,6 +176,8 @@ QQ号:2166825850
 一个数字的小数部分
 * 例: -3.1415926  
 小数部分为 -0.1415926  
+
+可以通过 [getDecimal()](https://github.com/Zightch/rational-number#rationalnumber-getdecimal) 函数 获取到数字的小数部分  
 #### 符号  
 它决定了一个数字的正负号  
 为1时数字是正数  
