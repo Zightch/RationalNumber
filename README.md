@@ -149,7 +149,7 @@ QQ号:2166825850
 #### getDecimal()  
 #### getPureNumber()  
 #### getPureNumberSize()  
-#### getSymbol();                      
+#### getSymbol()  
 #### getElement(size_t)  
 #### getElement(RationalNumber)  
 ### 定义  
