@@ -158,6 +158,10 @@ QQ号:2166825850
 只保留数字,丢弃符号和小数点  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getPureNumber().PNG)  
 #### size_t getIntegerSize()  
+获取 [整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86) 的长度  
+其实就是整数部分有多少位  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getIntegerSize().PNG)  
+上图中,数字a的整数部分有 3 位  
 #### size_t getDecimalSize()  
 #### size_t getPureNumberSize()  
 #### bool getSymbol()  
