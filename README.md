@@ -151,9 +151,11 @@ QQ号:2166825850
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getInteger().PNG)  
 #### RationalNumber getDecimal()  
 获取数字的[小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)  
+只保留符号和小数部分,整数部分为0  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getDecimal().PNG)  
 #### RationalNumber getPureNumber()  
 获取数字的[纯数字](https://github.com/Zightch/rational-number#%E7%BA%AF%E6%95%B0%E5%AD%97)  
+只保留数字,丢弃符号和小数点  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getPureNumber().PNG)  
 #### size_t getIntegerSize()  
 #### size_t getDecimalSize()  
@@ -164,13 +166,16 @@ QQ号:2166825850
 ### 定义  
 #### 整数部分  
 一个数字的整数部分  
-* 例1:  -101.98  
+* 例1: -101.98  
 整数部分为 -101  
 * 例2: -0.333  
 整数部分为 0  
 
 可以通过 [getInteger()](https://github.com/Zightch/rational-number#rationalnumber-getinteger) 函数 获取到数字的整数部分  
 #### 小数部分  
+一个数字的小数部分
+* 例: -3.1415926  
+小数部分为 -0.1415926  
 #### 符号  
 它决定了一个数字的正负号  
 为1时数字是正数  
