@@ -10,7 +10,7 @@ https://github.com/Zightch/rational-number/releases
 支持 + - * / 以及自运算  
 支持 比较大小(==,>=,<=,>,<,!=)  
 还有更多好用的功能(具体功能用法看 [**使用文档**](https://github.com/Zightch/rational-number#%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3) )  
-有问题可以联系 **林梦-Zightch**  
+有问题可以[联系](https://github.com/Zightch/rational-number#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F) **林梦-Zightch**  
 ### 联系方式  
 QQ号:2166825850  
 编程交流群:928034473  
@@ -18,6 +18,7 @@ QQ号:2166825850
  * [配置环境](https://github.com/Zightch/rational-number#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83)  
  * [开发文档](https://github.com/Zightch/rational-number#%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3)  
 ## 配置环境  
+
 <details>  
   <summary>展开</summary>  
 
