@@ -60,6 +60,7 @@ QQ号:2166825850
 <details>  
   <summary><a href = "https://github.com/Zightch/rational-number#%E5%87%BD%E6%95%B0">函数</a></summary>  
 
+* [构造函数](https://github.com/Zightch/rational-number#rationalnumber-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0)  
 * [c_str()](https://github.com/Zightch/rational-number#c_str)  
 * [flush()](https://github.com/Zightch/rational-number#flush)  
 * 设置函数  
@@ -68,29 +69,29 @@ QQ号:2166825850
   * [setElement(size_t, char)](https://github.com/Zightch/rational-number#setelementsize_t-char)  
   * [setElement(RationalNumber, char)](https://github.com/Zightch/rational-number#setelementrationalnumber-char)  
 * 获取函数  
-  * [getAccuracy()]()  
-  * [getIntegerSize()]()  
-  * [getDecimalSize()]()  
-  * [getInteger()]()  
-  * [getDecimal()]()  
-  * [getPureNumber()]()  
-  * [getPureNumberSize()]()  
-  * [getSymbol()]()  
-  * [getElement(size_t)]()  
-  * [getElement(RationalNumber)]()  
+  * [getAccuracy()](https://github.com/Zightch/rational-number#getaccuracy)  
+  * [getIntegerSize()](https://github.com/Zightch/rational-number#getintegersize)  
+  * [getDecimalSize()](https://github.com/Zightch/rational-number#getdecimalsize)  
+  * [getInteger()](https://github.com/Zightch/rational-number#getinteger)  
+  * [getDecimal()](https://github.com/Zightch/rational-number#getdecimal)  
+  * [getPureNumber()](https://github.com/Zightch/rational-number#getpurenumber)  
+  * [getPureNumberSize()](https://github.com/Zightch/rational-number#getpurenumbersize)  
+  * [getSymbol()](https://github.com/Zightch/rational-number#getsymbol)  
+  * [getElement(size_t)](https://github.com/Zightch/rational-number#getelementsize_t)  
+  * [getElement(RationalNumber)](https://github.com/Zightch/rational-number#getelementrationalnumber)  
 
 </details>  
 <details>  
   <summary><a href = "https://github.com/Zightch/rational-number#%E5%AE%9A%E4%B9%89">定义</a></summary>  
 
- * [整数部分]()  
- * [小数部分]()  
- * [符号]()  
- * [小数精度]()  
- * [0 的定义]()  
- * [纯数字]()  
- * [元素]()  
-  * [元素位置]()  
+ * [整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)  
+ * [小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)  
+ * [符号](https://github.com/Zightch/rational-number#%E7%AC%A6%E5%8F%B7)  
+ * [小数精度](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
+ * [0 的定义](https://github.com/Zightch/rational-number#0-%E7%9A%84%E5%AE%9A%E4%B9%89)  
+ * [纯数字](https://github.com/Zightch/rational-number#%E7%BA%AF%E6%95%B0%E5%AD%97)  
+ * [元素](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0)  
+  * [元素位置](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
 
 </details>  
 
@@ -170,6 +171,18 @@ QQ号:2166825850
 #### 0 的定义  
 整数部分和小数部分共同为 0 时,这个数字为 0  
 #### 纯数字  
+一个数字的纯数字,可以使用 [getPureNumber()](https://github.com/Zightch/rational-number#getpurenumber) 函数 获取数字的纯数字  
+就是一个数字,除去 符号 和 小数点 剩下的全部数字,就是纯数字  
+* 例1:数字 -101.236  
+它的纯数字为 101236  
+* 例2:数字 -0.6667  
+他的纯数字为 6667  
+* 例3:数字 14.0  
+他的纯数字为 14  
+
+也就是说  
+当整数部分为 0 时,纯数字只保留小数部分  
+当小数部分为 0 时,纯数字只保留整数部分  
 #### 元素  
 简单来说就是每一位的数字,包括整数和小数  
 例如数字 3.1415926  
