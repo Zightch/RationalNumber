@@ -138,7 +138,7 @@ QQ号:2166825850
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setElement(size_t%2C%20char)2.PNG)  
 #### void setElement(RationalNumber, char)  
 这是 [setElement(size_t, char)](https://github.com/Zightch/rational-number#setelementsize_t-char) 的重载  
-可以发现,size_t 被换成了 RationalNumber  
+可以发现 size_t 被换成了 RationalNumber  
 那么也就是说它可以访问到更大的下标  
 但是,起作用的只有[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)  
 因为下标只能是整数  
