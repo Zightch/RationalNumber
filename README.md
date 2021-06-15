@@ -15,9 +15,8 @@ https://github.com/Zightch/rational-number/releases
 QQ号:2166825850  
 编程交流群:928034473  
 # 使用文档  
-#### 1.[配置环境](https://github.com/Zightch/rational-number#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83)  
-#### 2.[开发文档](https://github.com/Zightch/rational-number#%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3)  
-
+ * [配置环境](https://github.com/Zightch/rational-number#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83)  
+ * [开发文档](https://github.com/Zightch/rational-number#%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3)  
 ## 配置环境  
 <details>  
   <summary>展开</summary>  
@@ -57,8 +56,44 @@ QQ号:2166825850
 </details>  
 
 ## 开发文档  
-1.[函数](https://github.com/Zightch/rational-number#%E5%87%BD%E6%95%B0)  
-2.[定义](https://github.com/Zightch/rational-number#%E5%AE%9A%E4%B9%89)  
+
+<details>  
+  <summary><a href = "https://github.com/Zightch/rational-number#%E5%87%BD%E6%95%B0">函数</a></summary>  
+
+* [c_str()](https://github.com/Zightch/rational-number#c_str)  
+* [flush()](https://github.com/Zightch/rational-number#flush)  
+* 设置函数  
+  * [setAccuracy(unsigned long = R_AC)](https://github.com/Zightch/rational-number#setaccuracyunsigned-long--r_ac)  
+  * [setSymbol(bool)](https://github.com/Zightch/rational-number#setsymbolbool)  
+  * [setElement(size_t, char)](https://github.com/Zightch/rational-number#setelementsize_t-char)  
+  * [setElement(RationalNumber, char)](https://github.com/Zightch/rational-number#setelementrationalnumber-char)  
+* 获取函数  
+  * [getAccuracy()]()  
+  * [getIntegerSize()]()  
+  * [getDecimalSize()]()  
+  * [getInteger()]()  
+  * [getDecimal()]()  
+  * [getPureNumber()]()  
+  * [getPureNumberSize()]()  
+  * [getSymbol()]()  
+  * [getElement(size_t)]()  
+  * [getElement(RationalNumber)]()  
+
+</details>  
+<details>  
+  <summary><a href = "https://github.com/Zightch/rational-number#%E5%AE%9A%E4%B9%89">定义</a></summary>  
+
+ * [整数部分]()  
+ * [小数部分]()  
+ * [符号]()  
+ * [小数精度]()  
+ * [0 的定义]()  
+ * [纯数字]()  
+ * [元素]()  
+  * [元素位置]()  
+
+</details>  
+
 ### 函数  
 #### RationalNumber 构造函数  
 一共 12 个重载  
