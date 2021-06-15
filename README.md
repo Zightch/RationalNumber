@@ -84,13 +84,13 @@ QQ号:2166825850
 <details>  
   <summary><a href = "https://github.com/Zightch/rational-number#%E5%AE%9A%E4%B9%89">定义</a></summary>  
 
- * [整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)  
- * [小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)  
- * [符号](https://github.com/Zightch/rational-number#%E7%AC%A6%E5%8F%B7)  
- * [小数精度](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
- * [0 的定义](https://github.com/Zightch/rational-number#0-%E7%9A%84%E5%AE%9A%E4%B9%89)  
- * [纯数字](https://github.com/Zightch/rational-number#%E7%BA%AF%E6%95%B0%E5%AD%97)  
- * [元素](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0)  
+* [整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)  
+* [小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)  
+* [符号](https://github.com/Zightch/rational-number#%E7%AC%A6%E5%8F%B7)  
+* [小数精度](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
+* [0 的定义](https://github.com/Zightch/rational-number#0-%E7%9A%84%E5%AE%9A%E4%B9%89)  
+* [纯数字](https://github.com/Zightch/rational-number#%E7%BA%AF%E6%95%B0%E5%AD%97)  
+* [元素](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0)  
   * [元素位置](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
 
 </details>  
