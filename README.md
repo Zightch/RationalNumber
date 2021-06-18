@@ -81,9 +81,9 @@ QQ号:2166825850
   * [char getElement(size_t)](https://github.com/Zightch/rational-number#char-getelementsize_t)  
   * [char getElement(RationalNumber)](https://github.com/Zightch/rational-number#char-getelementrationalnumber)  
 * 运算  
-  * [四则运算]()  
-  * [自运算]()  
-  * [比较大小]()  
+  * [四则运算](https://github.com/Zightch/rational-number#%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97)  
+  * [自运算](https://github.com/Zightch/rational-number#%E8%87%AA%E8%BF%90%E7%AE%97)  
+  * [比较大小](https://github.com/Zightch/rational-number#%E6%AF%94%E8%BE%83%E5%A4%A7%E5%B0%8F)  
 
 </details>  
 <details>  
@@ -191,6 +191,7 @@ QQ号:2166825850
 但是,下标起作用的只有[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)  
 因为下标只能是整数  
 #### 四则运算  
+* 例
 ```C++
 #include<iostream>
 #include"RationalNumber.h"
@@ -222,6 +223,27 @@ int main() {
 ```  
 ![](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97.PNG)  
 #### 自运算  
+* 例
+```C++
+#include<iostream>
+#include"RationalNumber.h"
+int main() {
+	RationalNumber a = 10;
+	a += 1;
+	std::cout << a.c_str() << std::endl;
+	a = 10;
+	a -= 5;
+	std::cout << a.c_str() << std::endl;
+	a = 10;
+	a *= 7;
+	std::cout << a.c_str() << std::endl;
+	a = 10;
+	a /= 3;
+	std::cout << a.c_str() << std::endl;
+	return 0;
+}
+```  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/%E8%87%AA%E8%BF%90%E7%AE%97.PNG)  
 #### 比较大小  
 ### 定义  
 #### 整数部分  
