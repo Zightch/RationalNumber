@@ -80,6 +80,10 @@ QQ号:2166825850
   * [bool getSymbol()](https://github.com/Zightch/rational-number#bool-getsymbol)  
   * [char getElement(size_t)](https://github.com/Zightch/rational-number#char-getelementsize_t)  
   * [char getElement(RationalNumber)](https://github.com/Zightch/rational-number#char-getelementrationalnumber)  
+* 运算  
+  * [四则运算]()  
+  * [自运算]()  
+  * [比较大小]()  
 
 </details>  
 <details>  
@@ -186,6 +190,39 @@ QQ号:2166825850
 那么也就是说它可以访问到更大的下标  
 但是,下标起作用的只有[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)  
 因为下标只能是整数  
+#### 四则运算  
+```C++
+#include<iostream>
+#include"RationalNumber.h"
+int main() {
+	RationalNumber a; RationalNumber b;
+	RationalNumber ans;
+	{//加
+		a = "10.1991"; b = "11.801";
+		ans = a + b;
+		std::cout << a.c_str() << " + " << b.c_str() << " = " << ans.c_str() << std::endl;
+	}
+	{//减
+		a = "13.198"; b = "11.18";
+		ans = a - b;
+		std::cout << a.c_str() << " - " << b.c_str() << " = " << ans.c_str() << std::endl;
+	}
+	{//乘
+		a = "0.49"; b = "0.22";
+		ans = a * b;
+		std::cout << a.c_str() << " * " << b.c_str() << " = " << ans.c_str() << std::endl;
+	}
+	{//除
+		a = "1"; b = "3";
+		ans = a / b;
+		std::cout << a.c_str() << " / " << b.c_str() << " = " << ans.c_str() << std::endl;
+	}
+	return 0;
+}
+```  
+![](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97.PNG)  
+#### 自运算  
+#### 比较大小  
 ### 定义  
 #### 整数部分  
 一个数字的整数部分  
