@@ -35,26 +35,17 @@ bool RationalNumber::getSymbol() {
 	return symbol;
 }
 
-char RationalNumber::getElement(RationalNumber num) {
+char RationalNumber::getElement(size_t num) {
 	if (num >= (integer + decimal).size()) {
 		throw "数组越界";
 	}
-	std::stringstream tmp_s;
-	tmp_s << num.integer;
-	size_t len;
-	tmp_s >> len;
-	if (len < integer.size()) {
-		char tmp = integer[len];
+	if (num < integer.size()) {
+		char tmp = integer[num];
 		return tmp;
 	}
 	else {
-		len -= integer.size();
-		char tmp = decimal[len];
+		num -= integer.size();
+		char tmp = decimal[num];
 		return tmp;
 	}
-}
-
-char RationalNumber::getElement(size_t num) {
-	RationalNumber tmp = num;
-	return this->getElement(tmp);
 }
