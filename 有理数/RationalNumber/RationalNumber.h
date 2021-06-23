@@ -7,6 +7,9 @@
 
 #include<string>
 
+template class rational_number std::allocator<char>;
+template class rational_number std::basic_string<char>;
+
 rational_number void setDivisionAccuracy(size_t);  //设置除法精度
 rational_number size_t getDivisionAccuracy();      //获取除法精度
 
@@ -36,7 +39,6 @@ public:
 	virtual void                     setAccuracy(unsigned long = R_AC);            //设置小数精度
 	virtual void                     setSymbol(bool);                              //设置正负
 	virtual void                     setElement(size_t, char);                     //设置元素
-	virtual void                     setElement(RationalNumber, char);             //设置元素
 
 	virtual size_t                   getAccuracy();                                //获取   小数精度
 	virtual size_t                   getIntegerSize();                             //获取   整数长度
@@ -47,7 +49,6 @@ public:
 	virtual size_t                   getPureNumberSize();                          //获取 纯数字长度
 	virtual bool                     getSymbol();                                  //获取   正 负 号
 	virtual char                     getElement(size_t);                           //获取元素
-	virtual char                     getElement(RationalNumber);                   //获取元素
 
 
 
