@@ -106,7 +106,7 @@ QQ号:2166825850
 
 </details>  
 
-* [注意事项](https://github.com/Zightch/rational-number#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)  
+[注意事项](https://github.com/Zightch/rational-number#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)  
 ### 函数  
 #### RationalNumber 构造函数  
 一共 12 个重载  
@@ -300,7 +300,32 @@ int main() {
 ### 综合使用示例  
 #### 冒泡排序  
 ```C++
-
+#include<iostream>
+#include"RationalNumber.h"
+int main() {
+	size_t n;
+	std::cin >> n;//输入元素个数
+	RationalNumber* a = new RationalNumber[n];//分配内存
+	for (size_t i = 0; i < n; i++) {//输入每个元素
+		std::string tmp;//由于RationalNumber类中没有提供直接用std::cin输入的接口,所以需要用字符串来中转
+		std::cin >> tmp;//输入数字的字符串
+		a[i] = tmp.c_str();//赋值
+	}
+	for (size_t i = 0; i < n - 1; i++) {//排序
+		for (size_t j = n - 1; j > i; j--) {
+			if (a[i] > a[j]) {
+				RationalNumber tmp = a[i];
+				a[i] = a[j];
+				a[j] = tmp;
+			}
+		}
+	}
+	for (size_t i = 0; i < n; i++) {//输出
+		std::cout << a[i].c_str() << " ";
+	}
+	delete[]a;
+	return 0;
+}
 ```  
 ### 注意事项  
 你会发现  
