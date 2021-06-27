@@ -4,7 +4,7 @@ bool RationalNumber::operator>(RationalNumber num) {
 	if (this->getSymbol() == 1 && num.getSymbol() == 0)return 1;
 	if (this->getSymbol() == 0 && num.getSymbol() == 1)return 0;
 	if (this->getSymbol() == 1) {
-		{//整数大小比较
+		{//鏁存暟澶у皬姣旇緝
 			if (this->getIntegerSize() > num.getIntegerSize())
 				return 1;
 			else if (this->getIntegerSize() < num.getIntegerSize())
@@ -17,7 +17,7 @@ bool RationalNumber::operator>(RationalNumber num) {
 					return 0;
 			}
 		}
-		{//小数大小比较
+		{//灏忔暟澶у皬姣旇緝
 			size_t tD = this->getDecimalSize() == 0 ? 1 : this->getDecimalSize();
 			size_t nD = num.getDecimalSize() == 0 ? 1 : num.getDecimalSize();
 			size_t len = 0, size = (tD > nD) ? nD : tD;
@@ -38,7 +38,7 @@ bool RationalNumber::operator>(RationalNumber num) {
 		RationalNumber tmp1 = *this;
 		RationalNumber tmp2 = num;
 		tmp1.setSymbol(1);
-		tmp1.setSymbol(1);
+		tmp2.setSymbol(1);
 		return (tmp1 < tmp2);
 	}
 	return 0;
