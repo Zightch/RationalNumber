@@ -99,14 +99,14 @@ QQ号:2166825850
 
 </details>  
 <details>  
-  <summary><a href = "">综合使用示例</a></summary>  
+  <summary><a href = "https://github.com/Zightch/rational-number#%E7%BB%BC%E5%90%88%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B">综合使用示例</a></summary>  
 
-* [冒泡排序]()  
+* [冒泡排序](https://github.com/Zightch/rational-number#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F)  
 * []()  
 
 </details>  
 
-* [注意事项]()  
+* [注意事项](https://github.com/Zightch/rational-number#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)  
 ### 函数  
 #### RationalNumber 构造函数  
 一共 12 个重载  
