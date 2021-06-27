@@ -341,7 +341,7 @@ int main() {
 你会发现  
 在开发文档的示例中  
 基本上含有小数的数字赋值都用的是字符串赋值  
-当然 , 在实际开发要使用本类库  
+当然 , 在实际开发如果需要使用本类库  
 强烈推荐也使用字符串复制  
 避免出现下列情况  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6%E9%97%AE%E9%A2%98.PNG)  
