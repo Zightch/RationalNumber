@@ -3,7 +3,8 @@ long long数据范围不够大?
 long double精度不够高?  
 RationalNumber(有理数)类库满足你的所有数据需求  
 # 下载
-https://github.com/Zightch/rational-number/releases  
+* [DLL下载](https://github.com/Zightch/rational-number/releases)  
+* [源代码下载](https://github.com/Zightch/rational-number/archive/refs/heads/main.zip)  
 # 说明  
 本类库由 **林梦-Zightch** 开发,为开源项目  
 类库自带的所有运算均为 **高精度** 计算  
@@ -68,7 +69,6 @@ QQ号:2166825850
   * [void setAccuracy(unsigned long = R_AC)](https://github.com/Zightch/rational-number#void-setaccuracyunsigned-long--r_ac)  
   * [void setSymbol(bool)](https://github.com/Zightch/rational-number#void-setsymbolbool)  
   * [void setElement(size_t, char)](https://github.com/Zightch/rational-number#void-setelementsize_t-char)  
-  * [void setElement(RationalNumber, char)](https://github.com/Zightch/rational-number#void-setelementrationalnumber-char)  
 * 获取函数  
   * [size_t getAccuracy()](https://github.com/Zightch/rational-number#size_t-getaccuracy)  
   * [size_t getIntegerSize()](https://github.com/Zightch/rational-number#size_t-getintegersize)  
@@ -79,7 +79,6 @@ QQ号:2166825850
   * [size_t getPureNumberSize()](https://github.com/Zightch/rational-number#size_t-getpurenumbersize)  
   * [bool getSymbol()](https://github.com/Zightch/rational-number#bool-getsymbol)  
   * [char getElement(size_t)](https://github.com/Zightch/rational-number#char-getelementsize_t)  
-  * [char getElement(RationalNumber)](https://github.com/Zightch/rational-number#char-getelementrationalnumber)  
 * 运算  
   * [四则运算](https://github.com/Zightch/rational-number#%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97)  
   * [自运算](https://github.com/Zightch/rational-number#%E8%87%AA%E8%BF%90%E7%AE%97)  
@@ -99,7 +98,15 @@ QQ号:2166825850
   * [元素位置](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
 
 </details>  
+<details>  
+  <summary><a href = "">综合使用示例</a></summary>  
 
+* [冒泡排序]()  
+* []()  
+
+</details>  
+
+* [注意事项]()  
 ### 函数  
 #### RationalNumber 构造函数  
 一共 12 个重载  
@@ -139,12 +146,6 @@ QQ号:2166825850
 只要不在这个范围内  
 就会抛出const char* 类型的异常(数据不符合规范)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setElement(size_t%2C%20char)2.PNG)  
-#### void setElement(RationalNumber, char)  
-这是 [setElement(size_t, char)](https://github.com/Zightch/rational-number#setelementsize_t-char) 函数 的重载  
-可以发现 size_t 被换成了 RationalNumber  
-那么也就是说它可以访问到更大的下标  
-但是,下标起作用的只有[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)  
-因为下标只能是整数  
 #### size_t getAccuracy()  
 可以获取数字的[小数精度](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getAccuracy().PNG)  
@@ -184,12 +185,6 @@ QQ号:2166825850
 获取[元素](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0)  
 参数(类型size_t)是[元素位置](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getElement(size_t).PNG)  
-#### char getElement(RationalNumber)  
-这是 [getElement(size_t)](https://github.com/Zightch/rational-number#char-getelementsize_t) 函数 的重载  
-可以发现 size_t 被换成了 RationalNumber  
-那么也就是说它可以访问到更大的下标  
-但是,下标起作用的只有[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)  
-因为下标只能是整数  
 #### 四则运算  
 * 例
 ```C++
@@ -245,6 +240,8 @@ int main() {
 ```  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/%E8%87%AA%E8%BF%90%E7%AE%97.PNG)  
 #### 比较大小  
+情况较多,这里就不列举了  
+用法同基本数据类型  
 ### 定义  
 #### 整数部分  
 一个数字的整数部分  
@@ -300,4 +297,24 @@ int main() {
 元素 | 9 | 0 | 3 | 4 | 2
 :-: | :-: | :-: | :-: | :-: | :-:
 元素位置(下标) | 0 | 1 | 2 | 3 | 4  
+### 综合使用示例  
+#### 冒泡排序  
+```C++
 
+```  
+### 注意事项  
+你会发现  
+在开发文档的示例中  
+基本上含有小数的数字赋值都用的是字符串赋值  
+当然 , 在实际开发要使用本类库  
+强烈推荐也使用字符串复制  
+避免出现下列情况  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6%E9%97%AE%E9%A2%98.PNG)  
+严格来说  
+输出结果应该是 191.99999  
+因为原先只有 5 位小数  
+实际上是 191.99998999999999682586349081248044  
+这就会导致一些问题和错误  
+所以换成字符串赋值  
+就可以避免上述情况  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6%E9%97%AE%E9%A2%982.PNG)  
