@@ -3,17 +3,14 @@
 #define rational_number __declspec(dllexport)
 //#define rational_number __declspec(dllimport)
 
-#define R_AC 7    //Ğ¡Êı¾«¶È
+#define R_AC 7    //å°æ•°ç²¾åº¦
 
 #include<string>
 
-template class rational_number std::allocator<char>;
-template class rational_number std::basic_string<char>;
+rational_number void setDivisionAccuracy(size_t);  //è®¾ç½®é™¤æ³•ç²¾åº¦
+rational_number size_t getDivisionAccuracy();      //è·å–é™¤æ³•ç²¾åº¦
 
-rational_number void setDivisionAccuracy(size_t);  //ÉèÖÃ³ı·¨¾«¶È
-rational_number size_t getDivisionAccuracy();      //»ñÈ¡³ı·¨¾«¶È
-
-class rational_number RationalNumber {//ÓĞÀíÊı
+class rational_number RationalNumber {//æœ‰ç†æ•°
 public:
 	RationalNumber();
 
@@ -33,22 +30,22 @@ public:
 
 	~RationalNumber();
 
-	virtual const char*              c_str();                                      //×ª×Ö·û´®
-	virtual void                     flush();                                      //Ë¢ĞÂÊı×Ö
+	virtual const char*              c_str();                                      //è½¬å­—ç¬¦ä¸²
+	virtual void                     flush();                                      //åˆ·æ–°æ•°å­—
  
-	virtual void                     setAccuracy(unsigned long = R_AC);            //ÉèÖÃĞ¡Êı¾«¶È
-	virtual void                     setSymbol(bool);                              //ÉèÖÃÕı¸º
-	virtual void                     setElement(size_t, char);                     //ÉèÖÃÔªËØ
+	virtual void                     setAccuracy(unsigned long = R_AC);            //è®¾ç½®å°æ•°ç²¾åº¦
+	virtual void                     setSymbol(bool);                              //è®¾ç½®æ­£è´Ÿ
+	virtual void                     setElement(size_t, char);                     //è®¾ç½®å…ƒç´ 
 
-	virtual size_t                   getAccuracy();                                //»ñÈ¡   Ğ¡Êı¾«¶È
-	virtual size_t                   getIntegerSize();                             //»ñÈ¡   ÕûÊı³¤¶È
-	virtual size_t                   getDecimalSize();                             //»ñÈ¡   Ğ¡Êı³¤¶È
-	virtual RationalNumber           getInteger();                                 //»ñÈ¡   ÕûÊı²¿·Ö
-	virtual RationalNumber           getDecimal();                                 //»ñÈ¡   Ğ¡Êı²¿·Ö
-	virtual RationalNumber           getPureNumber();                              //»ñÈ¡   ´¿ Êı ×Ö
-	virtual size_t                   getPureNumberSize();                          //»ñÈ¡ ´¿Êı×Ö³¤¶È
-	virtual bool                     getSymbol();                                  //»ñÈ¡   Õı ¸º ºÅ
-	virtual char                     getElement(size_t);                           //»ñÈ¡ÔªËØ
+	virtual size_t                   getAccuracy();                                //è·å–   å°æ•°ç²¾åº¦
+	virtual size_t                   getIntegerSize();                             //è·å–   æ•´æ•°é•¿åº¦
+	virtual size_t                   getDecimalSize();                             //è·å–   å°æ•°é•¿åº¦
+	virtual RationalNumber           getInteger();                                 //è·å–   æ•´æ•°éƒ¨åˆ†
+	virtual RationalNumber           getDecimal();                                 //è·å–   å°æ•°éƒ¨åˆ†
+	virtual RationalNumber           getPureNumber();                              //è·å–   çº¯ æ•° å­—
+	virtual size_t                   getPureNumberSize();                          //è·å– çº¯æ•°å­—é•¿åº¦
+	virtual bool                     getSymbol();                                  //è·å–   æ­£ è´Ÿ å·
+	virtual char                     getElement(size_t);                           //è·å–å…ƒç´ 
 
 
 
@@ -319,21 +316,21 @@ public:
 	virtual bool operator!=(const char*);
 
 protected:
-	std::string integer = "0";//ÕûÊı²¿·Ö
-	std::string decimal = "0";//Ğ¡Êı²¿·Ö
+	std::string integer = "0";//æ•´æ•°éƒ¨åˆ†
+	std::string decimal = "0";//å°æ•°éƒ¨åˆ†
 
-	bool symbol = 1;//·ûºÅ
+	bool symbol = 1;//ç¬¦å·
 	/*
-	* 1ÎªÕıÊı,0Îª¸ºÊı
-	* Èç¹ûÊı×ÖÎª0,´Ë±äÁ¿¿É1¿É0
-	* Ä¬ÈÏ1
+	* 1ä¸ºæ­£æ•°,0ä¸ºè´Ÿæ•°
+	* å¦‚æœæ•°å­—ä¸º0,æ­¤å˜é‡å¯1å¯0
+	* é»˜è®¤1
 	*/
 
-	size_t accuracy = R_AC;//Ğ¡Êı¾«¶È
+	size_t accuracy = R_AC;//å°æ•°ç²¾åº¦
 	/*
-	* Éèa=accuracy
-	* Ôò10µÄ-a´Î·½¾ÍÊÇËüµÄ¾«¶È
-	* ¼òµ¥À´Ëµ,¾ÍÊÇĞ¡ÊıµãºóaÎ»
+	* è®¾a=accuracy
+	* åˆ™10çš„-aæ¬¡æ–¹å°±æ˜¯å®ƒçš„ç²¾åº¦
+	* ç®€å•æ¥è¯´,å°±æ˜¯å°æ•°ç‚¹åaä½
 	*/
 
 	char* ccstr = 0;
