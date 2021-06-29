@@ -24,7 +24,7 @@ set(
         RationalNumber/basic/RationalNumber_set.cpp
 )
 set(
-        compare_the_size_source
+        data_comparison_source
         RationalNumber/data_comparison/RationalNumber_equal.cpp
         RationalNumber/data_comparison/RationalNumber_notEqual.cpp
         RationalNumber/data_comparison/RationalNumber_greaterThan.cpp
@@ -48,6 +48,6 @@ add_library(
 
         ${arithmetic_source}
         ${basic_source}
-        ${compare_the_size_source}
+        ${data_comparison_source}
         ${since_the_operation_source}
 )
