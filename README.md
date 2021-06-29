@@ -27,7 +27,7 @@ QQ号:2166825850
 打开VS2019,并新建空项目,名为Rational_test(名字自己写)  
 ### 第二步  
 * 1.从 [这里](https://github.com/Zightch/rational-number/releases) 下载已经编译生成好的dll文件和用户头文件  
-**(注意:找RationalNumber_MSVC.zip , 这样下载的才是VS2019的类库)**  
+**(注意:找RationalNumber_VS2019.MSVC.zip , 这样下载的才是VS2019的类库)**  
 如果你不放心可以从 [这里](https://github.com/Zightch/rational-number/archive/refs/heads/main.zip) 下载源代码,自己编译  
 * 2.打开下载好的 RationalNumber_MSVC.zip  
 将 RationalNumber.h 和 RationalNumber.lib 解压到 RationalNumber_test.vcxproj 所在目录下  
