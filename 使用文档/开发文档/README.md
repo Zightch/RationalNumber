@@ -1,4 +1,4 @@
-## 开发文档  
+# 开发文档  
 
 <details>  
   <summary><a href = "https://github.com/Zightch/rational-number#%E5%87%BD%E6%95%B0">函数</a></summary>  
@@ -48,33 +48,33 @@
 </details>  
 
 [注意事项](https://github.com/Zightch/rational-number#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)  
-### 函数  
-#### RationalNumber 构造函数  
+## 函数  
+### RationalNumber 构造函数  
 一共 12 个重载  
 满足所有的 基本数据类型 和 复合数据类型  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/RationalNumber%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0.PNG)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/RationalNumber%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B02.PNG)  
-#### const char* c_str()  
+### const char* c_str()  
 直接输出 RationalNumber 类型的变量是不可以的  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/c_str().PNG)  
 需要转换成 const char* 才能正常输出数据
 用法和 std::string::c_str() 类似  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/c_str()2.PNG)  
-#### void flush()  
+### void flush()  
 用于刷新数字(由于开发中很少遇到这种情况,这里就不图片演示了)  
 1.清除 整数 前多余的 0 和 小数 后多余的 0  
 2.如果这个数字是 0 [(关于 0 的定义)](https://github.com/Zightch/rational-number#0-%E7%9A%84%E5%AE%9A%E4%B9%89),并且符号为 "-" ,将符号变为 "+"  
 "-0091.3200" -> flush() -> "-91.32"  
 "-0" -> flush() -> "0"  
-#### void setAccuracy(unsigned long = R_AC)  
+### void setAccuracy(unsigned long = R_AC)  
 设置数字的[小数精度](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
 默认为7  
 可以通过更改它来实现改变输出的[小数精度](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setAccuracy(unsigned%20long%20%3D%20R_AC).PNG)  
-#### void setSymbol(bool)  
+### void setSymbol(bool)  
 设置数字的[符号](https://github.com/Zightch/rational-number#%E7%AC%A6%E5%8F%B7)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setSymbol(bool).PNG)  
-#### void setElement(size_t, char)  
+### void setElement(size_t, char)  
 设置[元素](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0)  
 第1个参数(类型size_t)是[元素位置](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
 如果你传入的参数大小超过最大下标,则会抛出const char* 类型的异常(数组越界)  
@@ -87,46 +87,46 @@
 只要不在这个范围内  
 就会抛出const char* 类型的异常(数据不符合规范)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setElement(size_t%2C%20char)2.PNG)  
-#### size_t getAccuracy()  
+### size_t getAccuracy()  
 可以获取数字的[小数精度](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getAccuracy().PNG)  
-#### RationalNumber getInteger()  
+### RationalNumber getInteger()  
 获取数字的[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)  
 只保留[符号](https://github.com/Zightch/rational-number#%E7%AC%A6%E5%8F%B7)和[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)的数字  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getInteger().PNG)  
-#### RationalNumber getDecimal()  
+### RationalNumber getDecimal()  
 获取数字的[小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)  
 只保留[符号](https://github.com/Zightch/rational-number#%E7%AC%A6%E5%8F%B7)和[小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86),[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)为0  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getDecimal().PNG)  
-#### RationalNumber getPureNumber()  
+### RationalNumber getPureNumber()  
 获取数字的[纯数字](https://github.com/Zightch/rational-number#%E7%BA%AF%E6%95%B0%E5%AD%97)  
 只保留数字,丢弃[符号](https://github.com/Zightch/rational-number#%E7%AC%A6%E5%8F%B7)和小数点  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getPureNumber().PNG)  
-#### size_t getIntegerSize()  
+### size_t getIntegerSize()  
 获取 [整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86) 的长度  
 其实就是[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)有多少位数字  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getIntegerSize().PNG)  
 上图中,数字a的[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)有 3 位数字  
 如果[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)为 0 ,则[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)有 1 位数字  
-#### size_t getDecimalSize()  
+### size_t getDecimalSize()  
 获取 [小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86) 的长度  
 其实就是[小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)有多少位数字  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getDecimalSize().PNG)  
 我们可以发现,当小数部分为 0 时,[小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)的长度(也就是小数位数)就是 0 位数字  
-#### size_t getPureNumberSize()  
+### size_t getPureNumberSize()  
 获取 [纯数字](https://github.com/Zightch/rational-number#%E7%BA%AF%E6%95%B0%E5%AD%97) 的长度  
 其实就是[纯数字](https://github.com/Zightch/rational-number#%E7%BA%AF%E6%95%B0%E5%AD%97)有多少位数字  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getPureNumberSize().PNG)  
 本质上来讲就是 [整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)的长度 + [小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)的长度  
 也是 [getIntegerSize()](https://github.com/Zightch/rational-number#rationalnumber-getinteger) + [getDecimalSize()](https://github.com/Zightch/rational-number#rationalnumber-getdecimal) 的结果  
-#### bool getSymbol()  
+### bool getSymbol()  
 获取一个数字的[符号](https://github.com/Zightch/rational-number#%E7%AC%A6%E5%8F%B7)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getSymbol().PNG)  
-#### char getElement(size_t)  
+### char getElement(size_t)  
 获取[元素](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0)  
 参数(类型size_t)是[元素位置](https://github.com/Zightch/rational-number#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getElement(size_t).PNG)  
-#### 四则运算  
+### 四则运算  
 * 例
 ```C++
 #include<iostream>
@@ -158,7 +158,7 @@ int main() {
 }
 ```  
 ![](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97.PNG)  
-#### 自运算  
+### 自运算  
 * 例
 ```C++
 #include<iostream>
@@ -180,11 +180,11 @@ int main() {
 }
 ```  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/%E8%87%AA%E8%BF%90%E7%AE%97.PNG)  
-#### 比较大小  
+### 比较大小  
 情况较多,这里就不列举了  
 用法同基本数据类型  
-### 定义  
-#### 整数部分  
+## 定义  
+### 整数部分  
 一个数字的整数部分  
 * 例1: -101.98  
 整数部分为 -101  
@@ -192,28 +192,28 @@ int main() {
 整数部分为 0  
 
 可以通过 [getInteger()](https://github.com/Zightch/rational-number#rationalnumber-getinteger) 函数 获取到数字的整数部分  
-#### 小数部分  
+### 小数部分  
 一个数字的小数部分
 * 例: -3.1415926  
 小数部分为 -0.1415926  
 
 可以通过 [getDecimal()](https://github.com/Zightch/rational-number#rationalnumber-getdecimal) 函数 获取到数字的小数部分  
-#### 符号  
+### 符号  
 它决定了一个数字的正负号  
 为1时数字是正数  
 为0时数字是负数  
 可以使用 [setSymbol(bool)](https://github.com/Zightch/rational-number#void-setsymbolbool) 函数 来改变数字的符号  
 可以使用 [getSymbol()](https://github.com/Zightch/rational-number#bool-getsymbol) 函数 来获取数字的符号  
-#### 小数精度  
+### 小数精度  
 一个宏定义 #define R_AC 7  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%AE%9A%E4%B9%89/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6.PNG)  
 它决定了 c_str() 的输出小数最大位数 和 被小数赋值时的最大位数  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%AE%9A%E4%B9%89/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A62.PNG)  
 我们可以发现 a 和 b 的小数位数都是 7 ,不管他们的[小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)的[纯数字](https://github.com/Zightch/rational-number#%E7%BA%AF%E6%95%B0%E5%AD%97)有多少位  
 如果要更改某个数字的 小数精度 可以使用 [setAccuracy(unsigned long = R_AC)](https://github.com/Zightch/rational-number#void-setaccuracyunsigned-long--r_ac) 函数  
-#### 0 的定义  
+### 0 的定义  
 当[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)和[小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)共同为 0 时,这个数字为 0  
-#### 纯数字  
+### 纯数字  
 一个数字的纯数字,可以使用 [getPureNumber()](https://github.com/Zightch/rational-number#rationalnumber-getpurenumber) 函数 获取数字的纯数字  
 就是一个数字,除去 符号 和 小数点 剩下的全部数字,就是纯数字  
 * 例1:数字 -101.236  
@@ -226,20 +226,20 @@ int main() {
 也就是说  
 当[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)为 0 时,纯数字只保留[小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)  
 当[小数部分](https://github.com/Zightch/rational-number#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)为 0 时,纯数字只保留[整数部分](https://github.com/Zightch/rational-number#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)  
-#### 元素  
+### 元素  
 简单来说就是每一位的数字,包括整数和小数  
 例如数字 3.1415926  
 3,1,4,1,5,9,2,6都是这个数字的元素  
 而符号和小数点不是该数字元素  
-##### 元素位置  
+#### 元素位置  
 例如数字 -90.342  
 9位于第0个元素,0位于第1个元素,3位于第2个元素......以此类推  
 即  
 元素 | 9 | 0 | 3 | 4 | 2
 :-: | :-: | :-: | :-: | :-: | :-:
 元素位置(下标) | 0 | 1 | 2 | 3 | 4  
-### 综合使用示例  
-#### 冒泡排序  
+## 综合使用示例  
+### 冒泡排序  
 ```C++
 #include<iostream>
 #include"RationalNumber.h"
@@ -277,7 +277,7 @@ int main() {
 ```
 -3.234 -3.233 -3.232 10.1998 10.1999 10.19999
 ```  
-### 注意事项  
+## 注意事项  
 * 字符串赋值问题  
 你会发现  
 在开发文档的示例中  
