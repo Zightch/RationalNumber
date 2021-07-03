@@ -59,7 +59,7 @@
 其中 lib 就是你的dll所在的文件夹  
   * 在 `add_executable(RationalNumber_test_CLion main.cpp)` 下一行写 `target_link_libraries(RationalNumber_test_CLion libRationalNumber.dll)`  
 其中 `RationalNumber_test_CLion` 是你的项目名称  
-`libRationalNumber.dll` 是你的dll名称  
+`libRationalNumber.dll` 是dll名称  
   * 在 `add_executable(RationalNumber_test_CLion main.cpp)` 的 `main.cpp` 后写 `RationalNumber.h`  
 
 调整完成后如图所示  
