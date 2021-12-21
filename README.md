@@ -6,7 +6,7 @@ RationalNumber(有理数)类库满足你的所有数据需求
 * [DLL下载](https://github.com/Zightch/rational-number/releases)  
 * [源代码下载](https://github.com/Zightch/rational-number/archive/refs/heads/main.zip)  
 # 说明  
-本类库由 **林梦-Zightch** 开发,为开源项目  
+本类库由 **寒梦-Zightch** 开发,为开源项目  
 类库自带的所有运算均为 **高精度** 计算  
 支持 加 减 乘 除 以及 自运算  
 支持 比较大小(==,>=,<=,>,<,!=)  
