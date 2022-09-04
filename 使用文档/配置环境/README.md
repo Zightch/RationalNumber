@@ -37,8 +37,9 @@
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/Visual%20Studio%202022/%E7%AC%AC%E5%9B%9B%E6%AD%A52.PNG)  
 * 4.将 RationalNumber.dll 复制到 RationalNumber_test.exe 所在目录下(对应的你选的架构与发行版本)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/Visual%20Studio%202022/%E7%AC%AC%E5%9B%9B%E6%AD%A53.PNG)  
-* 5.再次重新编译运行就不会有问题了  
+* 5.再次重新编译运行  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/Visual%20Studio%202022/%E7%AC%AC%E5%9B%9B%E6%AD%A54.PNG)  
+成功!  
 
 </details>  
 <details>  
@@ -51,20 +52,19 @@
 **(注意:找CLion-CMake.MinGW.zip , 这样下载的才是CLion-CMake(MinGW)的类库)**  
 如果你不放心可以从 [这里](https://github.com/Zightch/rational-number/archive/refs/heads/main.zip) 下载源代码,自己编译  
 * 2.打开下载好的 CLion-CMake.MinGW.zip  
-将 RationalNumber.h 解压到 main.cpp 所在目录下  
+将 include文件夹 解压到 main.cpp 所在目录下  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/CLion/%E7%AC%AC%E4%BA%8C%E6%AD%A52.PNG)  
-* 3.新建文件夹,文件夹名为 **lib (最好不要用其它的名字)**  
-将 libRationalNumber.dll 解压进去  
+* 3.新建文件夹,文件夹名为 **libs (最好不要用其它的名字)**  
+将 cmake-build-minsizerel文件夹 下的 libRationalNumber.dll 解压进去  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/CLion/%E7%AC%AC%E4%BA%8C%E6%AD%A53.PNG)  
 ## 第三步  
 * 1.打开你新建好的项目  
 * 2.打开 CMakeLists.txt ,进行调整  
-  * 在 `add_executable(RationalNumber_test_CLion main.cpp)` 上一行写 `link_directories(lib)`  
+  * 在 `add_executable(RationalNumber_test_CLion main.cpp)` 上一行写 `link_directories(libs)`  
 其中 lib 就是你的dll所在的文件夹  
   * 在 `add_executable(RationalNumber_test_CLion main.cpp)` 下一行写 `target_link_libraries(RationalNumber_test_CLion libRationalNumber.dll)`  
-其中 `RationalNumber_test_CLion` 是你的项目名称  
+* 其中 `RationalNumber_test_CLion` 是你的项目名称  
 `libRationalNumber.dll` 是dll名称  
-  * 在 `add_executable(RationalNumber_test_CLion main.cpp)` 的 `main.cpp` 后写 `RationalNumber.h`  
 
 调整完成后如图所示  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/CLion/%E7%AC%AC%E4%B8%89%E6%AD%A52.PNG)  
@@ -73,11 +73,10 @@
 修改代码,如图所示  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/CLion/%E7%AC%AC%E5%9B%9B%E6%AD%A51.PNG)  
 * 2.构建,运行  
-![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/CLion/%E7%AC%AC%E5%9B%9B%E6%AD%A52.PNG)  
 然后你会发现控制台显示进程非正常退出  
-![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/CLion/%E7%AC%AC%E5%9B%9B%E6%AD%A522.PNG)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/CLion/%E7%AC%AC%E5%9B%9B%E6%AD%A52.PNG)  
 原因是找不到依赖的dll  
-* 3.将 libRationalNumber.dll 复制到 RationalNumber_test_CLion.exe 所在目录下  
+* 3.将 libRationalNumber.dll 复制到 RationalNumber_test_CLion.exe 所在目录下(发行版本要对应)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/CLion/%E7%AC%AC%E5%9B%9B%E6%AD%A53.PNG)  
 * 4.重新运行  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/CLion/%E7%AC%AC%E5%9B%9B%E6%AD%A54.PNG)  
