@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="有理数">
+      <UniqueIdentifier>{7cf52872-eef4-4fb0-a527-f61bff0fc96c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="有理数\四则运算">
+      <UniqueIdentifier>{50fc9a15-1997-4944-9916-4e1ba3207a2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="有理数\自运算">
+      <UniqueIdentifier>{349d8f83-7488-4f57-a861-fac9a13a6523}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="有理数\数据比较">
+      <UniqueIdentifier>{32a0a42b-4e63-4cc5-838a-76bb089b52ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="有理数\基础">
+      <UniqueIdentifier>{50c45159-164f-4d65-9556-be8793da1559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="异常">
+      <UniqueIdentifier>{9224ed50-08b8-400d-8dc2-24acb0db3e87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="异常\数组越界异常">
+      <UniqueIdentifier>{4679b9ec-5634-414c-9f5e-6df40360ac7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="异常\数据不符合规范异常">
+      <UniqueIdentifier>{30d7e7b4-8e48-4c06-a158-e04a9d4965ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="异常\除数不能为0异常">
+      <UniqueIdentifier>{8c7aaf70-0342-480d-a00d-667a6c19bbf8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RationalNumber.cpp">
+      <Filter>有理数</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemRelated.cpp">
+      <Filter>有理数</Filter>
+    </ClCompile>
+    <ClCompile Include="since_the_operation\RationalNumber_decrement.cpp">
+      <Filter>有理数\自运算</Filter>
+    </ClCompile>
+    <ClCompile Include="since_the_operation\RationalNumber_sinceInAdditionTo.cpp">
+      <Filter>有理数\自运算</Filter>
+    </ClCompile>
+    <ClCompile Include="since_the_operation\RationalNumber_sinceTheAdd.cpp">
+      <Filter>有理数\自运算</Filter>
+    </ClCompile>
+    <ClCompile Include="since_the_operation\RationalNumber_square.cpp">
+      <Filter>有理数\自运算</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmetic\RationalNumber_addition.cpp">
+      <Filter>有理数\四则运算</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmetic\RationalNumber_division.cpp">
+      <Filter>有理数\四则运算</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmetic\RationalNumber_multiplication.cpp">
+      <Filter>有理数\四则运算</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmetic\RationalNumber_subtraction.cpp">
+      <Filter>有理数\四则运算</Filter>
+    </ClCompile>
+    <ClCompile Include="data_comparison\RationalNumber_equal.cpp">
+      <Filter>有理数\数据比较</Filter>
+    </ClCompile>
+    <ClCompile Include="data_comparison\RationalNumber_greaterThan.cpp">
+      <Filter>有理数\数据比较</Filter>
+    </ClCompile>
+    <ClCompile Include="data_comparison\RationalNumber_isEqualOrGreaterThan.cpp">
+      <Filter>有理数\数据比较</Filter>
+    </ClCompile>
+    <ClCompile Include="data_comparison\RationalNumber_isEqualOrLesserThan.cpp">
+      <Filter>有理数\数据比较</Filter>
+    </ClCompile>
+    <ClCompile Include="data_comparison\RationalNumber_lessThan.cpp">
+      <Filter>有理数\数据比较</Filter>
+    </ClCompile>
+    <ClCompile Include="data_comparison\RationalNumber_notEqual.cpp">
+      <Filter>有理数\数据比较</Filter>
+    </ClCompile>
+    <ClCompile Include="basic\RationalNumber_assign.cpp">
+      <Filter>有理数\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="basic\RationalNumber_get.cpp">
+      <Filter>有理数\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="basic\RationalNumber_other.cpp">
+      <Filter>有理数\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="basic\RationalNumber_set.cpp">
+      <Filter>有理数\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Exception\DivisorCannotBeZeroException\DivisorCannotBeZeroException.cpp">
+      <Filter>异常\除数不能为0异常</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Exception\DataNotSpecificationException\DataNotSpecificationException.cpp">
+      <Filter>异常\数据不符合规范异常</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Exception\ArrayIndexOutOfBoundsException\ArrayIndexOutOfBoundsException.cpp">
+      <Filter>异常\数组越界异常</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RationalNumber.h">
+      <Filter>有理数</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Exception\DivisorCannotBeZeroException\DivisorCannotBeZeroException.h">
+      <Filter>异常\除数不能为0异常</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Exception\DataNotSpecificationException\DataNotSpecificationException.h">
+      <Filter>异常\数据不符合规范异常</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Exception\ArrayIndexOutOfBoundsException\ArrayIndexOutOfBoundsException.h">
+      <Filter>异常\数组越界异常</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
