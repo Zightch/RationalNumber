@@ -77,7 +77,7 @@
 ### void setElement(size_t, char)  
 设置[元素](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%85%83%E7%B4%A0)  
 第1个参数(类型size_t)是[元素位置](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
-如果你传入的参数大小超过最大下标,则会抛出const char* 类型的异常(数组越界)  
+如果你传入的参数大小超过最大下标,则会抛出 ArrayIndexOutOfBoundsException类型 的异常(数组越界)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setElement(size_t%2C%20char).PNG)  
 第2个参数(类型char)是新的元素  
 就是你要替换的后的新元素  
@@ -85,7 +85,7 @@
 一种是 数字 0 ~ 9  
 另一种是 字符 '0' ~ '9'  
 只要不在这个范围内  
-就会抛出const char* 类型的异常(数据不符合规范)  
+就会抛出 DataNotSpecificationException类型 的异常(数据不符合规范)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setElement(size_t%2C%20char)2.PNG)  
 ### size_t getAccuracy()  
 可以获取数字的[小数精度](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
