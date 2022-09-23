@@ -1,7 +1,7 @@
 # RationalNumber
 long long数据范围不够大?  
 long double精度不够高?  
-RationalNumber(有理数)类库满足你的所有数据需求  
+RationalNumber(有理数)类库满足你的所有数字需求  
 # 下载
 * [DLL下载](https://github.com/Zightch/rational-number/releases)  
 * [源代码下载](https://github.com/Zightch/rational-number/archive/refs/heads/main.zip)  
