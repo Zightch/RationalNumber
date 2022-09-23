@@ -4,21 +4,31 @@
 #include <cstring>
 
 const char* RationalNumber::c_str() {
-	std::string tmp;
-	if (symbol == 0 && (integer != "0" || decimal != "0")) {
+	RationalNumber tmp = (*this);
+	if (tmp.decimal.size() > accuracy) {
+		if (tmp.decimal[accuracy] > '5') {
+			RationalNumber in1;
+			in1.decimal.append(accuracy - 2, '0');
+			in1.decimal.append(1, '1');
+			tmp += in1;
+			std::string ans_decimal_tmp = tmp.decimal;
+			tmp.decimal = "";
+			tmp.decimal.append(ans_decimal_tmp, 0, accuracy);
+		}
+	}
+	std::string tmp_s;
+	if (tmp.symbol == 0 && (tmp.integer != "0" || tmp.decimal != "0")) {
 		tmp += '-';
 	}
-	tmp += integer;
-	if (decimal != "0") {
-		tmp += ".";
-		std::string tmp_d;
-		tmp_d.assign(decimal, 0, accuracy);
-		tmp += tmp_d;
+	tmp_s += tmp.integer;
+	if (tmp.decimal != "0") {
+		tmp_s += ".";
+		tmp_s += tmp.decimal;
 	}
 	delete[]this->ccstr;
-	this->ccstr = new char[tmp.size() + 1];
-	strcpy(this->ccstr, tmp.c_str());
-	this->ccstr[tmp.size()] = 0;
+	this->ccstr = new char[tmp_s.size() + 1];
+	strcpy(this->ccstr, tmp_s.c_str());
+	this->ccstr[tmp_s.size()] = 0;
 	return ccstr;
 }
 

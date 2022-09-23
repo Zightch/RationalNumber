@@ -1,6 +1,6 @@
 ﻿#include "../RationalNumber.h"
 #include "../../Exception/DivisorCannotBeZeroException/DivisorCannotBeZeroException.h"
-RationalNumber RationalNumber::operator/(RationalNumber num) {
+RationalNumber RationalNumber::operator/(const RationalNumber& num) const {
     if (num == 0)throw DivisorCannotBeZeroException("RationalNumber::operator/", "除数不能为0");
     if (*this == 0)return {0};
     RationalNumber num1 = *this;
@@ -24,7 +24,8 @@ RationalNumber RationalNumber::operator/(RationalNumber num) {
     std::string ans_s;
     {//相除
         RationalNumber num1_tmp = num1;
-        for (size_t i = 0; i < getDivisionAccuracy(); i++) {
+        size_t len = getDivisionAccuracy() + getIntegerSize() - getDecimalSize();
+        for (size_t i = 0; i < len; i++) {
             RationalNumber tmp;
             for (size_t j = 0; j < num1_tmp.getIntegerSize(); j++) {
                 tmp.integer.assign(num1_tmp.integer, 0, j + 1);
@@ -50,7 +51,7 @@ RationalNumber RationalNumber::operator/(RationalNumber num) {
                 ans_s.append(1, '9');
             }
             num1_tmp = tmp - enumPlace[subscript - 1];
-            if (num1_tmp == 0)break;
+            //if (num1_tmp == 0)break;
             num1_tmp *= 10;
         }
     }
@@ -62,39 +63,48 @@ RationalNumber RationalNumber::operator/(RationalNumber num) {
     if (this->getSymbol() == num.getSymbol())ans.setSymbol(true);
     else ans.setSymbol(false);
     ans.flush();
+    if (ans.decimal[getDivisionAccuracy()] > '5') {
+        RationalNumber in1;
+        in1.decimal.append(getDivisionAccuracy() - 2, '0');
+        in1.decimal.append(1, '1');
+        ans += in1;
+        std::string ans_decimal_tmp = ans.decimal;
+        ans.decimal = "";
+        ans.decimal.append(ans_decimal_tmp, 0, getDivisionAccuracy());
+    }
     return ans;
 }
 
-RationalNumber RationalNumber::operator/(int num) {
+RationalNumber RationalNumber::operator/(int num) const {
     return *this / RationalNumber(num);
 }
-RationalNumber RationalNumber::operator/(long num) {
+RationalNumber RationalNumber::operator/(long num) const {
     return *this / RationalNumber(num);
 }
-RationalNumber RationalNumber::operator/(long long num) {
-    return *this / RationalNumber(num);
-}
-
-RationalNumber RationalNumber::operator/(unsigned int num) {
-    return *this / RationalNumber(num);
-}
-RationalNumber RationalNumber::operator/(unsigned long num) {
-    return *this / RationalNumber(num);
-}
-RationalNumber RationalNumber::operator/(unsigned long long num) {
+RationalNumber RationalNumber::operator/(long long num) const {
     return *this / RationalNumber(num);
 }
 
-RationalNumber RationalNumber::operator/(float num) {
+RationalNumber RationalNumber::operator/(unsigned int num) const {
     return *this / RationalNumber(num);
 }
-RationalNumber RationalNumber::operator/(double num) {
+RationalNumber RationalNumber::operator/(unsigned long num) const {
     return *this / RationalNumber(num);
 }
-RationalNumber RationalNumber::operator/(long double num) {
+RationalNumber RationalNumber::operator/(unsigned long long num) const {
     return *this / RationalNumber(num);
 }
 
-RationalNumber RationalNumber::operator/(const char* num) {
+RationalNumber RationalNumber::operator/(float num) const {
+    return *this / RationalNumber(num);
+}
+RationalNumber RationalNumber::operator/(double num) const {
+    return *this / RationalNumber(num);
+}
+RationalNumber RationalNumber::operator/(long double num) const {
+    return *this / RationalNumber(num);
+}
+
+RationalNumber RationalNumber::operator/(const char* num) const {
     return *this / RationalNumber(num);
 }

@@ -3,7 +3,7 @@
 #define rational_number __declspec(dllexport)
 //#define rational_number __declspec(dllimport)
 
-#define R_AC 7    //小数精度
+#define R_AC 6    //小数精度
 
 #include<string>
 
@@ -78,147 +78,147 @@ public:
 
 
 
-	RationalNumber operator+(RationalNumber);
+	RationalNumber operator+(const RationalNumber&) const;
 
-	RationalNumber operator+(int);
-	RationalNumber operator+(long);
-	RationalNumber operator+(long long);
+	RationalNumber operator+(int) const;
+	RationalNumber operator+(long) const;
+	RationalNumber operator+(long long) const;
 
-	RationalNumber operator+(unsigned int);
-	RationalNumber operator+(unsigned long);
-	RationalNumber operator+(unsigned long long);
+	RationalNumber operator+(unsigned int) const;
+	RationalNumber operator+(unsigned long) const;
+	RationalNumber operator+(unsigned long long) const;
 
-	RationalNumber operator+(float);
-	RationalNumber operator+(double);
-	RationalNumber operator+(long double);
+	RationalNumber operator+(float) const;
+	RationalNumber operator+(double) const;
+	RationalNumber operator+(long double) const;
 
-	RationalNumber operator+(const char*);
-
-
-
-	RationalNumber operator+=(const RationalNumber&);
-
-	RationalNumber operator+=(int);
-	RationalNumber operator+=(long);
-	RationalNumber operator+=(long long);
-
-	RationalNumber operator+=(unsigned int);
-	RationalNumber operator+=(unsigned long);
-	RationalNumber operator+=(unsigned long long);
-
-	RationalNumber operator+=(float);
-	RationalNumber operator+=(double);
-	RationalNumber operator+=(long double);
-
-	RationalNumber operator+=(const char*);
+	RationalNumber operator+(const char*) const;
 
 
 
-	RationalNumber operator*(RationalNumber);
+	RationalNumber& operator+=(const RationalNumber&);
 
-	RationalNumber operator*(int);
-	RationalNumber operator*(long);
-	RationalNumber operator*(long long);
+	RationalNumber& operator+=(int);
+	RationalNumber& operator+=(long);
+	RationalNumber& operator+=(long long);
 
-	RationalNumber operator*(unsigned int);
-	RationalNumber operator*(unsigned long);
-	RationalNumber operator*(unsigned long long);
+	RationalNumber& operator+=(unsigned int);
+	RationalNumber& operator+=(unsigned long);
+	RationalNumber& operator+=(unsigned long long);
 
-	RationalNumber operator*(float);
-	RationalNumber operator*(double);
-	RationalNumber operator*(long double);
+	RationalNumber& operator+=(float);
+	RationalNumber& operator+=(double);
+	RationalNumber& operator+=(long double);
 
-	RationalNumber operator*(const char*);
-
-
-
-	RationalNumber operator*=(const RationalNumber&);
-
-	RationalNumber operator*=(int);
-	RationalNumber operator*=(long);
-	RationalNumber operator*=(long long);
-
-	RationalNumber operator*=(unsigned int);
-	RationalNumber operator*=(unsigned long);
-	RationalNumber operator*=(unsigned long long);
-
-	RationalNumber operator*=(float);
-	RationalNumber operator*=(double);
-	RationalNumber operator*=(long double);
-
-	RationalNumber operator*=(const char*);
+	RationalNumber& operator+=(const char*);
 
 
 
-	RationalNumber operator-(RationalNumber);
+	RationalNumber operator*(const RationalNumber&) const;
 
-	RationalNumber operator-(int);
-	RationalNumber operator-(long);
-	RationalNumber operator-(long long);
+	RationalNumber operator*(int) const;
+	RationalNumber operator*(long) const;
+	RationalNumber operator*(long long) const;
 
-	RationalNumber operator-(unsigned int);
-	RationalNumber operator-(unsigned long);
-	RationalNumber operator-(unsigned long long);
+	RationalNumber operator*(unsigned int) const;
+	RationalNumber operator*(unsigned long) const;
+	RationalNumber operator*(unsigned long long) const;
 
-	RationalNumber operator-(float);
-	RationalNumber operator-(double);
-	RationalNumber operator-(long double);
+	RationalNumber operator*(float) const;
+	RationalNumber operator*(double) const;
+	RationalNumber operator*(long double) const;
 
-	RationalNumber operator-(const char*);
-
-
-
-	RationalNumber operator-=(const RationalNumber&);
-
-	RationalNumber operator-=(int);
-	RationalNumber operator-=(long);
-	RationalNumber operator-=(long long);
-
-	RationalNumber operator-=(unsigned int);
-	RationalNumber operator-=(unsigned long);
-	RationalNumber operator-=(unsigned long long);
-
-	RationalNumber operator-=(float);
-	RationalNumber operator-=(double);
-	RationalNumber operator-=(long double);
-
-	RationalNumber operator-=(const char*);
+	RationalNumber operator*(const char*) const;
 
 
 
-	RationalNumber operator/(RationalNumber);
+	RationalNumber& operator*=(const RationalNumber&);
 
-	RationalNumber operator/(int);
-	RationalNumber operator/(long);
-	RationalNumber operator/(long long);
+	RationalNumber& operator*=(int);
+	RationalNumber& operator*=(long);
+	RationalNumber& operator*=(long long);
 
-	RationalNumber operator/(unsigned int);
-	RationalNumber operator/(unsigned long);
-	RationalNumber operator/(unsigned long long);
+	RationalNumber& operator*=(unsigned int);
+	RationalNumber& operator*=(unsigned long);
+	RationalNumber& operator*=(unsigned long long);
 
-	RationalNumber operator/(float);
-	RationalNumber operator/(double);
-	RationalNumber operator/(long double);
+	RationalNumber& operator*=(float);
+	RationalNumber& operator*=(double);
+	RationalNumber& operator*=(long double);
 
-	RationalNumber operator/(const char*);
+	RationalNumber& operator*=(const char*);
 
 
 
-	RationalNumber operator/=(const RationalNumber&);
+	RationalNumber operator-(const RationalNumber&) const;
 
-	RationalNumber operator/=(int);
-	RationalNumber operator/=(long);
-	RationalNumber operator/=(long long);
+	RationalNumber operator-(int) const;
+	RationalNumber operator-(long) const;
+	RationalNumber operator-(long long) const;
 
-	RationalNumber operator/=(unsigned int);
-	RationalNumber operator/=(unsigned long);
-	RationalNumber operator/=(unsigned long long);
+	RationalNumber operator-(unsigned int) const;
+	RationalNumber operator-(unsigned long) const;
+	RationalNumber operator-(unsigned long long) const;
 
-	RationalNumber operator/=(float);
-	RationalNumber operator/=(double);
-	RationalNumber operator/=(long double);
+	RationalNumber operator-(float) const;
+	RationalNumber operator-(double) const;
+	RationalNumber operator-(long double) const;
 
-	RationalNumber operator/=(const char*);
+	RationalNumber operator-(const char*) const;
+
+
+
+	RationalNumber& operator-=(const RationalNumber&);
+
+	RationalNumber& operator-=(int);
+	RationalNumber& operator-=(long);
+	RationalNumber& operator-=(long long);
+
+	RationalNumber& operator-=(unsigned int);
+	RationalNumber& operator-=(unsigned long);
+	RationalNumber& operator-=(unsigned long long);
+
+	RationalNumber& operator-=(float);
+	RationalNumber& operator-=(double);
+	RationalNumber& operator-=(long double);
+
+	RationalNumber& operator-=(const char*);
+
+
+
+	RationalNumber operator/(const RationalNumber&) const;
+
+	RationalNumber operator/(int) const;
+	RationalNumber operator/(long) const;
+	RationalNumber operator/(long long) const;
+
+	RationalNumber operator/(unsigned int) const;
+	RationalNumber operator/(unsigned long) const;
+	RationalNumber operator/(unsigned long long) const;
+
+	RationalNumber operator/(float) const;
+	RationalNumber operator/(double) const;
+	RationalNumber operator/(long double) const;
+
+	RationalNumber operator/(const char*) const;
+
+
+
+	RationalNumber& operator/=(const RationalNumber&);
+
+	RationalNumber& operator/=(int);
+	RationalNumber& operator/=(long);
+	RationalNumber& operator/=(long long);
+
+	RationalNumber& operator/=(unsigned int);
+	RationalNumber& operator/=(unsigned long);
+	RationalNumber& operator/=(unsigned long long);
+
+	RationalNumber& operator/=(float);
+	RationalNumber& operator/=(double);
+	RationalNumber& operator/=(long double);
+
+	RationalNumber& operator/=(const char*);
 
 
 
