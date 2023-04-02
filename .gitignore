@@ -1,0 +1,7 @@
+/cmake-build*
+/[Rr]ational[Nn]umber/x64/
+/[Rr]ational[Nn]umber/[Dd]ebug/
+/[Rr]ational[Nn]umber/[Rr]elease/
+/.vs
+/.idea
+/x64

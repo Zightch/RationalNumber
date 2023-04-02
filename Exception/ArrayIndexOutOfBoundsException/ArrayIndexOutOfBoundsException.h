@@ -1,22 +1,30 @@
 #pragma once
 #include <exception>
-#include <string>
 
 #define rational_number __declspec(dllexport)
 //#define rational_number __declspec(dllimport)
-
+#ifdef _MSC_VER
+class rational_number std::exception;
+#endif
 class rational_number ArrayIndexOutOfBoundsException: public std::exception {
 public:
     ArrayIndexOutOfBoundsException();
 
-    [[maybe_unused]] ArrayIndexOutOfBoundsException(std::string, std::string);
+    [[maybe_unused]]
+    ArrayIndexOutOfBoundsException(const ArrayIndexOutOfBoundsException&);
+
+    ArrayIndexOutOfBoundsException &operator=(const ArrayIndexOutOfBoundsException&);
+
+    [[maybe_unused]]
+    ArrayIndexOutOfBoundsException(const char *, const char *);
 
     ~ArrayIndexOutOfBoundsException() override;
 
-    [[nodiscard]] const char *what() const noexcept override;
+    [[nodiscard]]
+    const char *what() const noexcept override;
 
 private:
-    std::string info;
-    std::string ID;
-    std::string res;
+    void *info = nullptr;
+    void *ID = nullptr;
+    void *res = nullptr;
 };

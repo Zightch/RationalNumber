@@ -1,11 +1,9 @@
 ﻿#include "RationalNumber.h"
-
-size_t divisionAccuracy = 23;
-
+unsigned long long divisionAccuracy = 23;
 [[maybe_unused]]
-void RationalNumber::setDivisionAccuracy(size_t num) {
-	divisionAccuracy = num;
+void RationalNumber::setDivisionAccuracy(unsigned long long num) {
+    divisionAccuracy = num;
 }
-size_t RationalNumber::getDivisionAccuracy() {
-	return divisionAccuracy;
+unsigned long long RationalNumber::getDivisionAccuracy() {
+    return divisionAccuracy;
 }

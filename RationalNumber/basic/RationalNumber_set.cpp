@@ -1,27 +1,29 @@
 ﻿#include "../RationalNumber.h"
 #include "../../Exception/ArrayIndexOutOfBoundsException/ArrayIndexOutOfBoundsException.h"
 #include "../../Exception/DataNotSpecificationException/DataNotSpecificationException.h"
-
+#include <string>
+#define THIS_INT (*(std::string*)this->integer)
+#define THIS_DEC (*(std::string*)this->decimal)
 [[maybe_unused]]
-void RationalNumber::setAccuracy(unsigned long accuracy_e) {
+void RationalNumber::setAccuracy(unsigned long long accuracy_e) {
 	this->accuracy = accuracy_e;
 }
-
+[[maybe_unused]]
 void RationalNumber::setSymbol(bool i) {
 	symbol = i;
 }
 
-[[maybe_unused]] void RationalNumber::setElement(size_t num, char i) {
-	if (num >= (integer + decimal).size()) {
+[[maybe_unused]] void RationalNumber::setElement(unsigned long long num, char i) {
+	if (num >= (THIS_INT + THIS_DEC).size()) {
 		throw ArrayIndexOutOfBoundsException("RationalNumber::setElement","数组越界");
 	}
 	char* tmp;
-	if (num < integer.size()) {
-		tmp = &integer[num];
+	if (num < THIS_INT.size()) {
+		tmp = &(THIS_INT)[num];
 	}
 	else {
-		num -= integer.size();
-		tmp = &decimal[num];
+		num -= THIS_INT.size();
+		tmp = &(THIS_DEC)[num];
 	}
 	if (i >= 0 && i <= 9)
 		(*tmp) = (char)(i + 48);

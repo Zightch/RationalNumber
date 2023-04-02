@@ -1,13 +1,15 @@
 ﻿#include "../RationalNumber.h"
-
+#include <string>
+#define THIS_INT (*(std::string*)this->integer)
+#define THIS_DEC (*(std::string*)this->decimal)
 RationalNumber RationalNumber::operator+(const RationalNumber& num) const {
-    if (this->getSymbol() == num.getSymbol()) {
-        std::string num1 = this->integer + this->decimal;
-        std::string num2 = num.integer + num.decimal;
+    if (this->symbol == num.symbol) {
+        std::string num1 = THIS_INT + THIS_DEC;
+        std::string num2 = *(std::string *) num.integer + *(std::string *) num.decimal;
         std::string ans;
         RationalNumber R_ans;
-        size_t tI = this->getIntegerSize(), tD = this->getDecimalSize() == 0 ? 1 : this->getDecimalSize();
-        size_t nI = num.getIntegerSize(), nD = num.getDecimalSize() == 0 ? 1 : num.getDecimalSize();
+        auto tI = THIS_INT.size(), tD = THIS_DEC.empty() ? 1 : THIS_DEC.size();
+        auto nI = ((std::string *) num.integer)->size(), nD = ((std::string *) num.decimal)->empty() ? 1 : ((std::string *) num.decimal)->size();
         {//小数点对齐
             if (tI > nI) {
                 num2.insert(0, tI - nI, '0');
@@ -25,11 +27,11 @@ RationalNumber RationalNumber::operator+(const RationalNumber& num) const {
         {//相加
             char *metric = new char[num1.size() + 2];
             char *ans_c = new char[num1.size() + 2];
-            for (size_t i = 0; i <= num1.size() + 1; i++) {
+            for (auto i = 0; i <= num1.size() + 1; i++) {
                 metric[i] = 0;
                 ans_c[i] = 0;
             }
-            for (size_t i = num1.size(); i >= 1; i--) {
+            for (auto i = num1.size(); i >= 1; i--) {
                 auto a = (short) ((num1[i - 1] - 48) + (num2[i - 1] - 48) + metric[i]);
                 if (a >= 10) {
                     metric[i - 1] = 1;
@@ -45,20 +47,20 @@ RationalNumber RationalNumber::operator+(const RationalNumber& num) const {
             delete[]ans_c;
         }
         {//还原小数点
-            R_ans.integer.assign(ans, 0, ans.size() - (tD > nD ? tD : nD));
-            R_ans.decimal.assign(ans, ans.size() - (tD > nD ? tD : nD), ans.size() - 1);
+            ((std::string *) R_ans.integer)->assign(ans, 0, ans.size() - (tD > nD ? tD : nD));
+            ((std::string *) R_ans.decimal)->assign(ans, ans.size() - (tD > nD ? tD : nD), ans.size() - 1);
         }
-        if (this->getSymbol() == 0)R_ans.symbol = false;
+        if (this->symbol == 0)R_ans.symbol = false;
         R_ans.flush();
         return R_ans;
     } else {
         if (num.symbol == 0) {
             RationalNumber tmp = num;
-            tmp.setSymbol(true);
+            tmp.symbol = true;
             return *this - num;
         } else {
             RationalNumber tmp = *this;
-            tmp.setSymbol(true);
+            tmp.symbol = true;
             return RationalNumber(0) - (tmp - num);
         }
     }
@@ -96,4 +98,34 @@ RationalNumber RationalNumber::operator+(long double num) const {
 
 RationalNumber RationalNumber::operator+(const char* num) const {
 	return *this + RationalNumber(num);
+}
+RationalNumber operator+(int n, const RationalNumber &r) {
+    return RationalNumber(n) + r;
+}
+RationalNumber operator+(long n, const RationalNumber &r) {
+    return RationalNumber(n) + r;
+}
+RationalNumber operator+(long long n, const RationalNumber &r) {
+    return RationalNumber(n) + r;
+}
+RationalNumber operator+(unsigned int n, const RationalNumber &r) {
+    return RationalNumber(n) + r;
+}
+RationalNumber operator+(unsigned long n, const RationalNumber &r) {
+    return RationalNumber(n) + r;
+}
+RationalNumber operator+(unsigned long long n, const RationalNumber &r) {
+    return RationalNumber(n) + r;
+}
+RationalNumber operator+(float n, const RationalNumber &r) {
+    return RationalNumber(n) + r;
+}
+RationalNumber operator+(double n, const RationalNumber &r) {
+    return RationalNumber(n) + r;
+}
+RationalNumber operator+(long double n, const RationalNumber &r) {
+    return RationalNumber(n) + r;
+}
+RationalNumber operator+(const char *n, const RationalNumber &r) {
+    return RationalNumber(n) + r;
 }

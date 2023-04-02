@@ -38,3 +38,33 @@ bool RationalNumber::operator>=(long double num) const {
 bool RationalNumber::operator>=(const char* num) const {
     return *this >= RationalNumber(num);
 }
+bool operator>=(int n, const RationalNumber &r) {
+    return RationalNumber(n) >= r;
+}
+bool operator>=(long n, const RationalNumber &r) {
+    return RationalNumber(n) >= r;
+}
+bool operator>=(long long n, const RationalNumber &r) {
+    return RationalNumber(n) >= r;
+}
+bool operator>=(unsigned int n, const RationalNumber &r) {
+    return RationalNumber(n) >= r;
+}
+bool operator>=(unsigned long n, const RationalNumber &r) {
+    return RationalNumber(n) >= r;
+}
+bool operator>=(unsigned long long n, const RationalNumber &r) {
+    return RationalNumber(n) >= r;
+}
+bool operator>=(float n, const RationalNumber &r) {
+    return RationalNumber(n) >= r;
+}
+bool operator>=(double n, const RationalNumber &r) {
+    return RationalNumber(n) >= r;
+}
+bool operator>=(long double n, const RationalNumber &r) {
+    return RationalNumber(n) >= r;
+}
+bool operator>=(const char *n, const RationalNumber &r) {
+    return RationalNumber(n) >= r;
+}

@@ -1,20 +1,19 @@
 ﻿#include "../RationalNumber.h"
 #include "../../Exception/DivisorCannotBeZeroException/DivisorCannotBeZeroException.h"
+#include <string>
+#define THIS_INT (*(std::string*)this->integer)
+#define THIS_DEC (*(std::string*)this->decimal)
 RationalNumber RationalNumber::operator/(const RationalNumber& num) const {
     if (num == 0)throw DivisorCannotBeZeroException("RationalNumber::operator/", "除数不能为0");
-    if (*this == 0)return {0};
+    if (*this == 0)return {};
     RationalNumber num1 = *this;
     RationalNumber num2 = num;
     {//小数点对齐
-        size_t nd2 = num2.getDecimalSize();
+        auto nd2 = ((std::string *) num2.decimal)->size();
         RationalNumber tmp = RationalNumber(1);
-        tmp.integer.append(nd2, '0');
+        ((std::string *) tmp.integer)->append(nd2, '0');
         num2 *= tmp;
         num1 *= tmp;
-        if (num1 < 1 && num1 > 0) {
-            num1 *= 10;
-            num2 *= 10;
-        }
     }
     RationalNumber enumPlace[10];
     {//准备枚举空间
@@ -24,13 +23,13 @@ RationalNumber RationalNumber::operator/(const RationalNumber& num) const {
     std::string ans_s;
     {//相除
         RationalNumber num1_tmp = num1;
-        size_t len = getDivisionAccuracy() + getIntegerSize() - getDecimalSize();
-        for (size_t i = 0; i < len; i++) {
+        auto len = getDivisionAccuracy() + THIS_INT.size() - THIS_DEC.size();
+        for (auto i = 0; i < len; i++) {
             RationalNumber tmp;
-            for (size_t j = 0; j < num1_tmp.getIntegerSize(); j++) {
-                tmp.integer.assign(num1_tmp.integer, 0, j + 1);
+            for (auto j = 0; j < ((std::string *) num1_tmp.integer)->size(); j++) {
+                ((std::string *) tmp.integer)->assign(*(std::string *) num1_tmp.integer, 0, j + 1);
                 if (tmp < num2) {
-                    if (num1_tmp.getIntegerSize() <= j + 1) {
+                    if (((std::string *) num1_tmp.integer)->size() <= j + 1) {
                         num1_tmp *= 10;
                         if (i != 0)
                             ans_s.append(1, '0');
@@ -51,26 +50,26 @@ RationalNumber RationalNumber::operator/(const RationalNumber& num) const {
                 ans_s.append(1, '9');
             }
             num1_tmp = tmp - enumPlace[subscript - 1];
-            //if (num1_tmp == 0)break;
             num1_tmp *= 10;
         }
     }
     RationalNumber ans;
     {//还原小数点
-        ans.integer.assign(ans_s, 0, num1.getIntegerSize());
-        ans.decimal.assign(ans_s, num1.getIntegerSize(), ans_s.size());
+        ((std::string *) ans.integer)->assign(ans_s, 0, ((std::string *) num1.integer)->size());
+        ((std::string *) ans.decimal)->assign(ans_s, ((std::string *) num1.integer)->size(), ans_s.size());
     }
-    if (this->getSymbol() == num.getSymbol())ans.setSymbol(true);
-    else ans.setSymbol(false);
+    if (this->symbol == num.symbol)ans.symbol = true;
+    else ans.symbol = false;
     ans.flush();
-    if (ans.decimal[getDivisionAccuracy()] > '5') {
+    //四舍五入
+    if ((*(std::string *) ans.decimal)[getDivisionAccuracy()] > '5') {
         RationalNumber in1;
-        in1.decimal.append(getDivisionAccuracy() - 2, '0');
-        in1.decimal.append(1, '1');
+        ((std::string *) in1.decimal)->append(getDivisionAccuracy() - 2, '0');
+        ((std::string *) in1.decimal)->append(1, '1');
         ans += in1;
-        std::string ans_decimal_tmp = ans.decimal;
-        ans.decimal = "";
-        ans.decimal.append(ans_decimal_tmp, 0, getDivisionAccuracy());
+        std::string ans_decimal_tmp = *(std::string *) ans.decimal;
+        *(std::string *) ans.decimal = "";
+        ((std::string *) ans.decimal)->append(ans_decimal_tmp, 0, getDivisionAccuracy());
     }
     return ans;
 }
@@ -107,4 +106,34 @@ RationalNumber RationalNumber::operator/(long double num) const {
 
 RationalNumber RationalNumber::operator/(const char* num) const {
     return *this / RationalNumber(num);
+}
+RationalNumber operator/(int n, const RationalNumber &r) {
+    return RationalNumber(n) / r;
+}
+RationalNumber operator/(long n, const RationalNumber &r) {
+    return RationalNumber(n) / r;
+}
+RationalNumber operator/(long long n, const RationalNumber &r) {
+    return RationalNumber(n) / r;
+}
+RationalNumber operator/(unsigned int n, const RationalNumber &r) {
+    return RationalNumber(n) / r;
+}
+RationalNumber operator/(unsigned long n, const RationalNumber &r) {
+    return RationalNumber(n) / r;
+}
+RationalNumber operator/(unsigned long long n, const RationalNumber &r) {
+    return RationalNumber(n) / r;
+}
+RationalNumber operator/(float n, const RationalNumber &r) {
+    return RationalNumber(n) / r;
+}
+RationalNumber operator/(double n, const RationalNumber &r) {
+    return RationalNumber(n) / r;
+}
+RationalNumber operator/(long double n, const RationalNumber &r) {
+    return RationalNumber(n) / r;
+}
+RationalNumber operator/(const char *n, const RationalNumber &r) {
+    return RationalNumber(n) / r;
 }

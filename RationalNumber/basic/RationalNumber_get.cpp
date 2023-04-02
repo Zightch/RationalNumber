@@ -1,53 +1,57 @@
 ﻿#include "../RationalNumber.h"
 #include "../../Exception/ArrayIndexOutOfBoundsException/ArrayIndexOutOfBoundsException.h"
-
+#include <string>
+#define THIS_INT (*(std::string*)this->integer)
+#define THIS_DEC (*(std::string*)this->decimal)
 [[maybe_unused]]
-size_t RationalNumber::getAccuracy() const {
+unsigned long long RationalNumber::getAccuracy() const {
 	return accuracy;
 }
-size_t RationalNumber::getIntegerSize() const {
-	return integer.size();
+unsigned long long RationalNumber::getIntegerSize() const {
+	return THIS_INT.size();
 }
-size_t RationalNumber::getDecimalSize() const {
-	if (decimal == "0")return 0;
-	return decimal.size();
+[[maybe_unused]]
+unsigned long long RationalNumber::getDecimalSize() const {
+	if (THIS_DEC == "0")return 0;
+	return THIS_DEC.size();
 }
 RationalNumber RationalNumber::getInteger() const {
-	return {(std::string(symbol == 1 ? "" : "-") + integer).c_str()};
+    return RationalNumber((std::string(symbol == 1 ? "" : "-") + THIS_INT).c_str());
 }
 RationalNumber RationalNumber::getDecimal() const {
 	RationalNumber tmp;
 	tmp.accuracy = accuracy;
-	tmp = ((std::string)(symbol == 1 ? "0." : "-0.") + decimal).c_str();
+	tmp = ((std::string)(symbol == 1 ? "0." : "-0.") + THIS_DEC).c_str();
 	return tmp;
 }
 RationalNumber RationalNumber::getPureNumber() const {
-	if (decimal == "0")
-		return {integer.c_str()};
-	return {(integer + decimal).c_str()};
+    if (THIS_DEC == "0")
+        return RationalNumber(THIS_INT.c_str());
+    return RationalNumber((THIS_INT + THIS_DEC).c_str());
 }
 
-size_t RationalNumber::getPureNumberSize() const {
+unsigned long long RationalNumber::getPureNumberSize() const {
 	std::string tmp = getPureNumber().c_str();
 	return tmp.size();
 }
 
+[[maybe_unused]]
 bool RationalNumber::getSymbol() const {
 	return symbol;
 }
 
 [[maybe_unused]]
-char RationalNumber::getElement(size_t num) {
-	if (num >= (integer + decimal).size()) {
+char RationalNumber::getElement(unsigned long long num) {
+	if (num >= (THIS_INT + THIS_DEC).size()) {
 		throw ArrayIndexOutOfBoundsException("RationalNumber::getElement","数组越界");
 	}
-	if (num < integer.size()) {
-		char tmp = integer[num];
+	if (num < THIS_INT.size()) {
+		char tmp = THIS_INT[num];
 		return tmp;
 	}
 	else {
-		num -= integer.size();
-		char tmp = decimal[num];
+		num -= THIS_INT.size();
+		char tmp = THIS_DEC[num];
 		return tmp;
 	}
 }
