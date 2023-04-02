@@ -66,7 +66,7 @@
 2.如果这个数字是 0 [(关于 0 的定义)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#0-%E7%9A%84%E5%AE%9A%E4%B9%89),并且符号为 "-" ,将符号变为 "+"  
 "-0091.3200" -> flush() -> "-91.32"  
 "-0" -> flush() -> "0"  
-### void setAccuracy(unsigned long = R_AC)  
+### void setAccuracy(unsigned long long = R_AC)  
 设置数字的[小数精度](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
 默认为7  
 可以通过更改它来实现改变输出的[小数精度](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
