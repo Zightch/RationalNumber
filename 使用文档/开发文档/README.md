@@ -125,7 +125,7 @@
 ### char getElement(unsigned long long)  
 获取[元素](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%85%83%E7%B4%A0)  
 参数(类型unsigned long long)是[元素位置](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
-![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getElement(unsigned long long).PNG)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getElement(size_t).PNG)  
 ### 四则运算  
 * 例
 ```C++
@@ -210,7 +210,7 @@ int main() {
 它决定了 c_str() 的输出小数最大位数 和 被小数赋值时的最大位数  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%AE%9A%E4%B9%89/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A62.PNG)  
 我们可以发现 a 和 b 的小数位数都是 7 ,不管他们的[小数部分](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)的[纯数字](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E7%BA%AF%E6%95%B0%E5%AD%97)有多少位  
-如果要更改某个数字的 小数精度 可以使用 [setAccuracy(unsigned long = R_AC)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setaccuracyunsigned-long--r_ac) 函数  
+如果要更改某个数字的 小数精度 可以使用 [setAccuracy(unsigned long = R_AC)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setaccuracyunsigned-long-long--r_ac) 函数  
 ### 0 的定义  
 当[整数部分](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)和[小数部分](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)共同为 0 时,这个数字为 0  
 ### 纯数字  
