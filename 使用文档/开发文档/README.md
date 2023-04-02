@@ -7,19 +7,19 @@
 * [const char* c_str()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#const-char-c_str)  
 * [void flush()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-flush)  
 * 设置函数  
-  * [void setAccuracy(unsigned long long = R_AC)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setaccuracyunsigned-long--r_ac)  
+  * [void setAccuracy(unsigned long long = R_AC)](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setaccuracyunsigned-long-long--r_ac)  
   * [void setSymbol(bool)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setsymbolbool)  
-  * [void setElement(unsigned long long, char)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setelementunsigned long long-char)  
+  * [void setElement(unsigned long long, char)](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setelementunsigned-long-long-char)  
 * 获取函数  
-  * [unsigned long long getAccuracy()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned long long-getaccuracy)  
-  * [unsigned long long getIntegerSize()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned long long-getintegersize)  
-  * [unsigned long long getDecimalSize()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned long long-getdecimalsize)  
+  * [unsigned long long getAccuracy()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned-long-long-getaccuracy)  
+  * [unsigned long long getIntegerSize()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned-long-long-getintegersize)  
+  * [unsigned long long getDecimalSize()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned-long-long-getdecimalsize)  
   * [RationalNumber getInteger()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#rationalnumber-getinteger)  
   * [RationalNumber getDecimal()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#rationalnumber-getdecimal)  
   * [RationalNumber getPureNumber()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#rationalnumber-getpurenumber)  
-  * [unsigned long long getPureNumberSize()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned long long-getpurenumbersize)  
+  * [unsigned long long getPureNumberSize()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned-long-long-getpurenumbersize)  
   * [bool getSymbol()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#bool-getsymbol)  
-  * [char getElement(unsigned long long)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#char-getelementunsigned long long)  
+  * [char getElement(unsigned long long)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#char-getelementunsigned-long-long)  
 * 运算  
   * [四则运算](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97)  
   * [自运算](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E8%87%AA%E8%BF%90%E7%AE%97)  
@@ -66,7 +66,7 @@
 2.如果这个数字是 0 [(关于 0 的定义)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#0-%E7%9A%84%E5%AE%9A%E4%B9%89),并且符号为 "-" ,将符号变为 "+"  
 "-0091.3200" -> flush() -> "-91.32"  
 "-0" -> flush() -> "0"  
-### void setAccuracy(unsigned long = R_AC)  
+### void setAccuracy(unsigned long long = R_AC)  
 设置数字的[小数精度](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
 默认为7  
 可以通过更改它来实现改变输出的[小数精度](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
@@ -78,7 +78,7 @@
 设置[元素](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%85%83%E7%B4%A0)  
 第1个参数(类型unsigned long long)是[元素位置](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
 如果你传入的参数大小超过最大下标,则会抛出 ArrayIndexOutOfBoundsException类型 的异常(数组越界)  
-![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setElement(unsigned long long%2C%20char).PNG)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setElement(size_t%2C%20char).PNG)  
 第2个参数(类型char)是新的元素  
 就是你要替换的后的新元素  
 这个参数允许使用两种数据  
@@ -86,7 +86,7 @@
 另一种是 字符 '0' ~ '9'  
 只要不在这个范围内  
 就会抛出 DataNotSpecificationException类型 的异常(数据不符合规范)  
-![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setElement(unsigned long long%2C%20char)2.PNG)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setElement(size_t%2C%20char)2.PNG)  
 ### unsigned long long getAccuracy()  
 可以获取数字的[小数精度](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getAccuracy().PNG)  
@@ -125,7 +125,7 @@
 ### char getElement(unsigned long long)  
 获取[元素](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%85%83%E7%B4%A0)  
 参数(类型unsigned long long)是[元素位置](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
-![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getElement(unsigned long long).PNG)  
+![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/getElement(size_t).PNG)  
 ### 四则运算  
 * 例
 ```C++
@@ -210,7 +210,7 @@ int main() {
 它决定了 c_str() 的输出小数最大位数 和 被小数赋值时的最大位数  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%AE%9A%E4%B9%89/%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A62.PNG)  
 我们可以发现 a 和 b 的小数位数都是 7 ,不管他们的[小数部分](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)的[纯数字](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E7%BA%AF%E6%95%B0%E5%AD%97)有多少位  
-如果要更改某个数字的 小数精度 可以使用 [setAccuracy(unsigned long = R_AC)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setaccuracyunsigned-long--r_ac) 函数  
+如果要更改某个数字的 小数精度 可以使用 [setAccuracy(unsigned long = R_AC)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setaccuracyunsigned-long-long--r_ac) 函数  
 ### 0 的定义  
 当[整数部分](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)和[小数部分](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86)共同为 0 时,这个数字为 0  
 ### 纯数字  
