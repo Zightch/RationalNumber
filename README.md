@@ -14,7 +14,7 @@ RationalNumber(有理数)类库满足你的所有数字需求
 有问题可以[联系](https://github.com/Zightch/rational-number#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F) **寒梦-Zightch**  
 # 注意  
 本库仅限于进行高精度数值计算  
-暂且没有任何的时间上的优化  
+暂且没有任何的时间上和空间上的优化  
 若想快速计算数据  
 请使用传统数据类型  
 ### 联系方式  
