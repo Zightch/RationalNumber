@@ -43,7 +43,7 @@
   <summary><a href = "https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E7%BB%BC%E5%90%88%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B">综合使用示例</a></summary>  
 
 * [冒泡排序](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F)  
-* [快速排序]()  
+* [快速排序](https://github.com/Zightch/RationalNumber/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/README.md#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F)  
 * []()
 
 </details>  
