@@ -5,11 +5,11 @@
 
 * [构造函数](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#rationalnumber-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0)  
 * [const char* c_str()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#const-char-c_str)  
-* [RationalNumber &flush()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-flush)  
+* [RationalNumber &flush()](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#rationalnumber-flush)  
 * 设置函数  
-  * [RationalNumber &setAccuracy(unsigned long long = R_AC)](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setaccuracyunsigned-long-long--r_ac)  
-  * [RationalNumber &setSymbol(bool)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setsymbolbool)  
-  * [RationalNumber &setElement(unsigned long long, char)](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setelementunsigned-long-long-char)  
+  * [RationalNumber &setAccuracy(unsigned long long = R_AC)](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#rationalnumber-setaccuracyunsigned-long-long--r_ac)  
+  * [RationalNumber &setSymbol(bool)](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#rationalnumber-setsymbolbool)  
+  * [RationalNumber &setElement(unsigned long long, char)](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#rationalnumber-setelementunsigned-long-long-char)  
 * 获取函数  
   * [unsigned long long getAccuracy()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned-long-long-getaccuracy)  
   * [unsigned long long getIntegerSize()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned-long-long-getintegersize)  
