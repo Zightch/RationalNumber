@@ -43,7 +43,8 @@
   <summary><a href = "https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E7%BB%BC%E5%90%88%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B">综合使用示例</a></summary>  
 
 * [冒泡排序](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F)  
-* []()  
+* [快速排序]()  
+* []()
 
 </details>  
 
@@ -234,10 +235,11 @@ int main() {
 #### 元素位置  
 例如数字 -90.342  
 9位于第0个元素,0位于第1个元素,3位于第2个元素......以此类推  
-即  
-元素 | 9 | 0 | 3 | 4 | 2
-:-: | :-: | :-: | :-: | :-: | :-:
+即
+元素 | 9 | 0 | 3 | 4 | 2  
+:-: | :-: | :-: | :-: | :-: | :-:  
 元素位置(下标) | 0 | 1 | 2 | 3 | 4  
+
 ## 综合使用示例  
 ### 冒泡排序  
 ```C++
@@ -277,6 +279,55 @@ int main() {
 ```
 -3.234 -3.233 -3.232 10.1998 10.1999 10.19999
 ```  
+### 快速排序
+```C++
+#include <iostream>
+#include <functional>
+#include "RationalNumber.h"
+template<typename T>
+void sort(T *array, unsigned long long int left, unsigned long long int right, std::function<bool(T, T)> compare) {
+    unsigned long long j;
+    if (left >= right)return;
+    T x = array[left];
+    j = left;
+    for (unsigned long long i = left + 1; i < right; i++) {
+        if (compare(array[i], x)) {
+            j = j + 1;
+            T tmp = array[i];
+            array[i] = array[j];
+            array[j] = tmp;
+        }
+    }
+    array[left] = array[j];
+    array[j] = x;
+    if (j > 0)sort(array, left, j - 1, compare);
+    if (j < right)sort(array, j + 1, right, compare);
+}
+int main() {
+    unsigned long long n;
+    std::cin >> n;//输入元素个数
+    auto *a = new RationalNumber[n];
+    for (unsigned long long i = 0; i < n; i++) {
+        std::string tmp;
+        std::cin >> tmp;//需要借助string来对有理数进行赋值
+        a[i] = tmp.c_str();
+    }
+    auto cmp = [](const RationalNumber& a, const RationalNumber& b) -> bool { return a < b; };
+    sort<RationalNumber>(a, 0, n, cmp);
+    for (unsigned long long i = 0; i < n; i++)std::cout << a[i].c_str() << " ";
+    delete[]a;
+    return 0;
+}
+```
+例样输入
+```
+6
+10.1998 10.1999 10.19999 -3.234 -3.233 -3.232
+```  
+例样输出
+```
+-3.234 -3.233 -3.232 10.1998 10.1999 10.19999
+``` 
 ## 注意事项  
 * 字符串赋值问题  
 你会发现  

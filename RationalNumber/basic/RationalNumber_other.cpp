@@ -19,9 +19,8 @@ const char* RationalNumber::c_str() {
         ((std::string *) tmp.decimal)->append(ans_decimal_tmp, 0, accuracy);
     }
     std::string tmp_s;
-    if (tmp.symbol == 0 && (*(std::string *) tmp.integer != "0" || *(std::string *) tmp.decimal != "0")) {
-        tmp += '-';
-    }
+    if (tmp.symbol == 0 && (*(std::string *) tmp.integer != "0" || *(std::string *) tmp.decimal != "0"))
+        tmp_s += '-';
     tmp_s += *(std::string *) tmp.integer;
     if (*(std::string *) tmp.decimal != "0") {
         tmp_s += ".";
