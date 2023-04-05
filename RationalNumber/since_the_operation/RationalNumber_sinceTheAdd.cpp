@@ -1,4 +1,5 @@
-﻿#include "../RationalNumber.h"
+﻿#define RATIONAL_NUMBER_EXPORT
+#include "../RationalNumber.h"
 
 RationalNumber& RationalNumber::operator+=(const RationalNumber& num) {
 	(*this) = (*this) + num;

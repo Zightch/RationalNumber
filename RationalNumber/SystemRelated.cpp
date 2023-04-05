@@ -1,4 +1,5 @@
-﻿#include "RationalNumber.h"
+﻿#define RATIONAL_NUMBER_EXPORT
+#include "RationalNumber.h"
 unsigned long long divisionAccuracy = 23;
 [[maybe_unused]]
 void RationalNumber::setDivisionAccuracy(unsigned long long num) {

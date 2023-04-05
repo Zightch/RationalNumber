@@ -1,3 +1,4 @@
+#define RATIONAL_NUMBER_EXPORT
 #include "DivisorCannotBeZeroException.h"
 #include <string>
 

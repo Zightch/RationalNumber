@@ -1,4 +1,5 @@
-﻿#include "../RationalNumber.h"
+﻿#define RATIONAL_NUMBER_EXPORT
+#include "../RationalNumber.h"
 
 bool RationalNumber::operator<=(const RationalNumber& num) const {
 	if (*this == num || *this < num)return true;

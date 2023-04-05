@@ -1,12 +1,20 @@
 #pragma once
-
 #include <exception>
-#define rational_number __declspec(dllexport)
-//#define rational_number __declspec(dllimport)
-#ifdef _MSC_VER
-class rational_number std::exception;
+
+#ifdef _WIN64
+#ifdef RATIONAL_NUMBER_EXPORT
+#define RATIONAL_NUMBER __declspec(dllexport)
+#else
+#define RATIONAL_NUMBER __declspec(dllimport)
 #endif
-class rational_number DivisorCannotBeZeroException : public std::exception {
+#ifdef _MSC_VER
+class RATIONAL_NUMBER std::exception;
+#endif
+#else
+#define RATIONAL_NUMBER
+#endif
+
+class RATIONAL_NUMBER DivisorCannotBeZeroException : public std::exception {
 public:
     DivisorCannotBeZeroException();
 

@@ -1,3 +1,4 @@
+#define RATIONAL_NUMBER_EXPORT
 #include "ArrayIndexOutOfBoundsException.h"
 #include <string>
 ArrayIndexOutOfBoundsException::ArrayIndexOutOfBoundsException() {

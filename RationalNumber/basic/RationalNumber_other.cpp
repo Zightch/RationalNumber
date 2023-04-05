@@ -1,4 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+﻿#define RATIONAL_NUMBER_EXPORT
 #include "../RationalNumber.h"
 #include <string>
 #define THIS_INT (*(std::string*)this->integer)
@@ -13,10 +13,10 @@ const char* RationalNumber::c_str() {
             ((std::string *) in1.decimal)->append(accuracy - 2, '0');
             ((std::string *) in1.decimal)->append(1, '1');
             tmp += in1;
-            std::string ans_decimal_tmp = *(std::string *) tmp.decimal;
-            *(std::string *) tmp.decimal = "";
-            ((std::string *) tmp.decimal)->append(ans_decimal_tmp, 0, accuracy);
         }
+        std::string ans_decimal_tmp = *(std::string *) tmp.decimal;
+        *(std::string *) tmp.decimal = "";
+        ((std::string *) tmp.decimal)->append(ans_decimal_tmp, 0, accuracy);
     }
     std::string tmp_s;
     if (tmp.symbol == 0 && (*(std::string *) tmp.integer != "0" || *(std::string *) tmp.decimal != "0")) {
@@ -34,7 +34,7 @@ const char* RationalNumber::c_str() {
     return ccstr;
 }
 
-void RationalNumber::flush() {
+RationalNumber &RationalNumber::flush() {
     std::string tmp = THIS_INT;
     size_t i;
     for (i = 0; i < tmp.size() && tmp[i] == '0'; i++);
@@ -48,4 +48,5 @@ void RationalNumber::flush() {
         THIS_DEC.assign(tmp, 0, i);
 
     if (THIS_INT == "0" && THIS_DEC == "0")symbol = true;
+    return *this;
 }

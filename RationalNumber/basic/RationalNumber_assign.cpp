@@ -1,3 +1,4 @@
+#define RATIONAL_NUMBER_EXPORT
 #include "../RationalNumber.h"
 #include <string>
 #define THIS_INT (*(std::string*)this->integer)

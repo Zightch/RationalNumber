@@ -1,4 +1,5 @@
-﻿#include "../RationalNumber.h"
+﻿#define RATIONAL_NUMBER_EXPORT
+#include "../RationalNumber.h"
 #include "../../Exception/DivisorCannotBeZeroException/DivisorCannotBeZeroException.h"
 #include <string>
 #define THIS_INT (*(std::string*)this->integer)

@@ -1,3 +1,4 @@
+#define RATIONAL_NUMBER_EXPORT
 #include "DataNotSpecificationException.h"
 #include <string>
 DataNotSpecificationException::DataNotSpecificationException() {

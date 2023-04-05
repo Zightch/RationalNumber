@@ -5,11 +5,11 @@
 
 * [构造函数](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#rationalnumber-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0)  
 * [const char* c_str()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#const-char-c_str)  
-* [void flush()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-flush)  
+* [RationalNumber &flush()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-flush)  
 * 设置函数  
-  * [void setAccuracy(unsigned long long = R_AC)](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setaccuracyunsigned-long-long--r_ac)  
-  * [void setSymbol(bool)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setsymbolbool)  
-  * [void setElement(unsigned long long, char)](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setelementunsigned-long-long-char)  
+  * [RationalNumber &setAccuracy(unsigned long long = R_AC)](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setaccuracyunsigned-long-long--r_ac)  
+  * [RationalNumber &setSymbol(bool)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setsymbolbool)  
+  * [RationalNumber &setElement(unsigned long long, char)](https://github.com/Zightch/RationalNumber/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#void-setelementunsigned-long-long-char)  
 * 获取函数  
   * [unsigned long long getAccuracy()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned-long-long-getaccuracy)  
   * [unsigned long long getIntegerSize()](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#unsigned-long-long-getintegersize)  
@@ -60,21 +60,21 @@
 需要转换成 const char* 才能正常输出数据
 用法和 std::string::c_str() 类似  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/c_str()2.PNG)  
-### void flush()  
+### RationalNumber &flush()  
 用于刷新数字(由于开发中很少遇到这种情况,这里就不图片演示了)  
 1.清除 整数 前多余的 0 和 小数 后多余的 0  
 2.如果这个数字是 0 [(关于 0 的定义)](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#0-%E7%9A%84%E5%AE%9A%E4%B9%89),并且符号为 "-" ,将符号变为 "+"  
 "-0091.3200" -> flush() -> "-91.32"  
 "-0" -> flush() -> "0"  
-### void setAccuracy(unsigned long long = R_AC)  
+### RationalNumber &setAccuracy(unsigned long long = R_AC)  
 设置数字的[小数精度](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
 默认为7  
 可以通过更改它来实现改变输出的[小数精度](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%B0%8F%E6%95%B0%E7%B2%BE%E5%BA%A6)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setAccuracy(unsigned%20long%20%3D%20R_AC).PNG)  
-### void setSymbol(bool)  
+### RationalNumber &setSymbol(bool)  
 设置数字的[符号](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E7%AC%A6%E5%8F%B7)  
 ![image](https://github.com/Zightch/rational-number/blob/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E5%87%BD%E6%95%B0/setSymbol(bool).PNG)  
-### void setElement(unsigned long long, char)  
+### RationalNumber &setElement(unsigned long long, char)  
 设置[元素](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%85%83%E7%B4%A0)  
 第1个参数(类型unsigned long long)是[元素位置](https://github.com/Zightch/rational-number/tree/main/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3#%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE)  
 如果你传入的参数大小超过最大下标,则会抛出 ArrayIndexOutOfBoundsException类型 的异常(数组越界)  
